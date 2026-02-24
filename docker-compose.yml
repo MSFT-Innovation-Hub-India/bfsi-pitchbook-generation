@@ -1,0 +1,56 @@
+# Docker Compose for Local Testing
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: pitchbook-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - AZURE_OPENAI_ENDPOINT=https://gtartifacts-openai.openai.azure.com/
+      - AZURE_OPENAI_CHAT_DEPLOYMENT_NAME=gpt-4o-mini
+      - AZURE_AI_PROJECT_ENDPOINT=https://fsiagents8305923089.services.ai.azure.com/api/projects/fsiagents8305923089-project
+      - AZURE_AI_MODEL_DEPLOYMENT_NAME=gpt-4o-mini
+      # API keys removed - using Entra ID authentication
+    volumes:
+      - ./backend:/app
+      - backend-data:/app/data
+    networks:
+      - pitchbook-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: pitchbook-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - pitchbook-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+networks:
+  pitchbook-network:
+    driver: bridge
+
+volumes:
+  backend-data:
+    driver: local

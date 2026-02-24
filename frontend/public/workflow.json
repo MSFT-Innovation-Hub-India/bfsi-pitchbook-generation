@@ -1,0 +1,377 @@
+{
+  "id": "workflow-jan-001",
+  "workflowId": "pitchbook-jan-001",
+  "createdAt": "2026-01-09T16:30:00Z",
+  "status": "completed",
+  "messages": [
+    {
+      "type": "system",
+      "agent": "System",
+      "message": "Starting round-robin discussion...",
+      "timestamp": "2026-01-09T16:30:00.000Z",
+      "data": {}
+    },
+    {
+      "type": "system",
+      "agent": "GroupChat",
+      "message": "Executing multi-agent orchestration...",
+      "timestamp": "2026-01-09T16:30:02.000Z",
+      "data": {}
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Quality Validator\n📋 Instruction: What is the next section?",
+      "timestamp": "2026-01-09T16:30:05.000Z",
+      "data": {
+        "participant": "Quality Validator",
+        "selected_participant": "Validator",
+        "instruction": "What is the next section?",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Quality Validator",
+      "message": "SECTION: 1 - Company Snapshots\nAGENT: Financial Analyst\nREQUEST: Extract company snapshot data for both Vodafone Idea and Apollo Micro Systems.",
+      "timestamp": "2026-01-09T16:30:10.000Z",
+      "data": {
+        "section": 1,
+        "agent": "FinancialDocumentsAgent"
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Financial Analyst\n📋 Instruction: Generate section 1 for Company Snapshots",
+      "timestamp": "2026-01-09T16:30:15.000Z",
+      "data": {
+        "participant": "Financial Analyst",
+        "selected_participant": "FinancialDocumentsAgent",
+        "instruction": "Generate section 1 for Company Snapshots",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Financial Analyst",
+      "message": "Section 1: Company Snapshots completed with comprehensive analysis for Vodafone Idea and Apollo Micro Systems.",
+      "timestamp": "2026-01-09T16:30:25.000Z",
+      "data": {
+        "section": 1,
+        "completed": true
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Quality Validator\n📋 Instruction: What is the next section?",
+      "timestamp": "2026-01-09T16:30:30.000Z",
+      "data": {
+        "participant": "Quality Validator",
+        "selected_participant": "Validator",
+        "instruction": "What is the next section?",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Quality Validator",
+      "message": "SECTION: 2 - News & Sentiment Analysis\nAGENT: Market Insights Analyst\nREQUEST: Analyze recent news and sentiment for both companies.",
+      "timestamp": "2026-01-09T16:30:35.000Z",
+      "data": {
+        "section": 2,
+        "agent": "NewsSentimentAgent"
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Market Insights Analyst\n📋 Instruction: Generate section 2 for News & Sentiment",
+      "timestamp": "2026-01-09T16:30:40.000Z",
+      "data": {
+        "participant": "Market Insights Analyst",
+        "selected_participant": "NewsSentimentAgent",
+        "instruction": "Generate section 2 for News & Sentiment",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Market Insights Analyst",
+      "message": "Section 2: News & Sentiment Analysis completed with 12 detailed news items per company.",
+      "timestamp": "2026-01-09T16:30:50.000Z",
+      "data": {
+        "section": 2,
+        "completed": true
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Quality Validator\n📋 Instruction: What is the next section?",
+      "timestamp": "2026-01-09T16:30:55.000Z",
+      "data": {
+        "participant": "Quality Validator",
+        "selected_participant": "Validator",
+        "instruction": "What is the next section?",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Quality Validator",
+      "message": "SECTION: 3 - Financial Statements\nAGENT: Financial Analyst\nREQUEST: Analyze financial statements for both companies.",
+      "timestamp": "2026-01-09T16:31:00.000Z",
+      "data": {
+        "section": 3,
+        "agent": "FinancialDocumentsAgent"
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Financial Analyst\n📋 Instruction: Generate section 3 for Financial Statements",
+      "timestamp": "2026-01-09T16:31:05.000Z",
+      "data": {
+        "participant": "Financial Analyst",
+        "selected_participant": "FinancialDocumentsAgent",
+        "instruction": "Generate section 3 for Financial Statements",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Financial Analyst",
+      "message": "Section 3: Financial Statements completed with detailed revenue, margin, leverage, and cash flow analysis.",
+      "timestamp": "2026-01-09T16:31:15.000Z",
+      "data": {
+        "section": 3,
+        "completed": true
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Quality Validator\n📋 Instruction: What is the next section?",
+      "timestamp": "2026-01-09T16:31:20.000Z",
+      "data": {
+        "participant": "Quality Validator",
+        "selected_participant": "Validator",
+        "instruction": "What is the next section?",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Quality Validator",
+      "message": "SECTION: 4 - Valuation Tables\nAGENT: Peer Comparison Analyst\nREQUEST: Create peer comparison valuation tables.",
+      "timestamp": "2026-01-09T16:31:25.000Z",
+      "data": {
+        "section": 4,
+        "agent": "PeerComparisonAgent"
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Peer Comparison Analyst\n📋 Instruction: Generate section 4 for Valuation Tables",
+      "timestamp": "2026-01-09T16:31:30.000Z",
+      "data": {
+        "participant": "Peer Comparison Analyst",
+        "selected_participant": "PeerComparisonAgent",
+        "instruction": "Generate section 4 for Valuation Tables",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Peer Comparison Analyst",
+      "message": "Section 4: Valuation Tables completed with comprehensive peer comparison data.",
+      "timestamp": "2026-01-09T16:31:40.000Z",
+      "data": {
+        "section": 4,
+        "completed": true
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Quality Validator\n📋 Instruction: What is the next section?",
+      "timestamp": "2026-01-09T16:31:45.000Z",
+      "data": {
+        "participant": "Quality Validator",
+        "selected_participant": "Validator",
+        "instruction": "What is the next section?",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Quality Validator",
+      "message": "SECTION: 5 - Historical Valuation Trends\nAGENT: Peer Comparison Analyst\nREQUEST: Analyze historical valuation trends.",
+      "timestamp": "2026-01-09T16:31:50.000Z",
+      "data": {
+        "section": 5,
+        "agent": "PeerComparisonAgent"
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Peer Comparison Analyst\n📋 Instruction: Generate section 5 for Historical Valuation",
+      "timestamp": "2026-01-09T16:31:55.000Z",
+      "data": {
+        "participant": "Peer Comparison Analyst",
+        "selected_participant": "PeerComparisonAgent",
+        "instruction": "Generate section 5 for Historical Valuation",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Peer Comparison Analyst",
+      "message": "Section 5: Historical Valuation Trends completed with market performance analysis.",
+      "timestamp": "2026-01-09T16:32:05.000Z",
+      "data": {
+        "section": 5,
+        "completed": true
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Quality Validator\n📋 Instruction: What is the next section?",
+      "timestamp": "2026-01-09T16:32:10.000Z",
+      "data": {
+        "participant": "Quality Validator",
+        "selected_participant": "Validator",
+        "instruction": "What is the next section?",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Quality Validator",
+      "message": "SECTION: 6 - SWOT Analysis\nAGENT: Financial Analyst\nREQUEST: Extract SWOT analysis for both companies.",
+      "timestamp": "2026-01-09T16:32:15.000Z",
+      "data": {
+        "section": 6,
+        "agent": "FinancialDocumentsAgent"
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Financial Analyst\n📋 Instruction: Generate section 6 for SWOT Analysis",
+      "timestamp": "2026-01-09T16:32:20.000Z",
+      "data": {
+        "participant": "Financial Analyst",
+        "selected_participant": "FinancialDocumentsAgent",
+        "instruction": "Generate section 6 for SWOT Analysis",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Financial Analyst",
+      "message": "Section 6: SWOT Analysis completed with strengths, weaknesses, opportunities, and threats.",
+      "timestamp": "2026-01-09T16:32:30.000Z",
+      "data": {
+        "section": 6,
+        "completed": true
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Quality Validator\n📋 Instruction: What is the next section?",
+      "timestamp": "2026-01-09T16:32:35.000Z",
+      "data": {
+        "participant": "Quality Validator",
+        "selected_participant": "Validator",
+        "instruction": "What is the next section?",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Quality Validator",
+      "message": "SECTION: 7 - Risk & Growth Drivers\nAGENT: Financial Analyst\nREQUEST: Extract risk and growth driver analyses.",
+      "timestamp": "2026-01-09T16:32:40.000Z",
+      "data": {
+        "section": 7,
+        "agent": "FinancialDocumentsAgent"
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Financial Analyst\n📋 Instruction: Generate section 7 for Risk & Growth Drivers",
+      "timestamp": "2026-01-09T16:32:45.000Z",
+      "data": {
+        "participant": "Financial Analyst",
+        "selected_participant": "FinancialDocumentsAgent",
+        "instruction": "Generate section 7 for Risk & Growth Drivers",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Financial Analyst",
+      "message": "Section 7: Risk & Growth Drivers completed with asymmetry analysis between risks and growth opportunities.",
+      "timestamp": "2026-01-09T16:32:55.000Z",
+      "data": {
+        "section": 7,
+        "completed": true
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "🎯 Agent Selected: Quality Validator\n📋 Instruction: What is the next section?",
+      "timestamp": "2026-01-09T16:33:00.000Z",
+      "data": {
+        "participant": "Quality Validator",
+        "selected_participant": "Validator",
+        "instruction": "What is the next section?",
+        "finish": false
+      }
+    },
+    {
+      "type": "agent_response",
+      "agent": "Quality Validator",
+      "message": "SECTION: 8 - Investment Thesis & Recommendations\nINSTRUCTION: Orchestrator to synthesize insights into final recommendations.",
+      "timestamp": "2026-01-09T16:33:05.000Z",
+      "data": {
+        "section": 8,
+        "agent": "Coordinator"
+      }
+    },
+    {
+      "type": "orchestrator",
+      "agent": "Workflow Orchestrator",
+      "message": "✅ Synthesizing final investment thesis and recommendations from all sections...",
+      "timestamp": "2026-01-09T16:33:10.000Z",
+      "data": {
+        "finish": false
+      }
+    },
+    {
+      "type": "system",
+      "agent": "System",
+      "message": "PITCHBOOK COMPLETE: All 8 sections have been generated successfully.",
+      "timestamp": "2026-01-09T16:44:50.000Z",
+      "data": {
+        "complete": true
+      }
+    },
+    {
+      "type": "complete",
+      "agent": "System",
+      "message": "Workflow completed successfully!",
+      "timestamp": "2026-01-09T16:45:00.000Z",
+      "data": {}
+    }
+  ]
+}

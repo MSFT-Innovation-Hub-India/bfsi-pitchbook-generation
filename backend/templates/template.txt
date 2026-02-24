@@ -1,0 +1,329 @@
+SECTION 1 — Company Overview
+Slide 1: Company Snapshot
+
+Include:
+
+Company name
+
+HQ & founding year
+
+Business segments
+
+Key products/services
+
+Revenue mix
+
+Geographic presence
+
+High-level business model (1 paragraph)
+
+SECTION 2 — Industry Overview
+Slide 2: Industry Landscape
+
+Include:
+
+Market size
+
+Industry CAGR (historic & projected)
+
+Growth drivers (4–6)
+
+Challenges (4–6)
+
+Slide 3: Market Positioning
+
+Include:
+
+Market share
+
+Top competitors
+
+Value-chain position
+
+Differentiators (3–5)
+
+SECTION 3 — Financial Performance
+Slide 4: Quarterly Financials (Last 4–6 Quarters)
+
+Include:
+
+Revenue
+
+EBITDA
+
+EBITDA margin
+
+PAT
+
+Trend commentary
+
+Slide 5: Key Operating Metrics
+
+Telecom (Vodafone Idea):
+
+ARPU
+
+Subscriber growth
+
+4G/5G penetration
+
+Data usage per user
+
+Defense/EMS (Apollo Micro Systems):
+
+Order intake
+
+Order book value
+
+Execution ratio
+
+Segment revenue mix
+
+SECTION 4 — VALUATION (MANDATORY 4 TABLES PER COMPANY)
+
+This section compares each company with its fixed 5 peers.
+
+Valuation – Vodafone Idea (compared against 5 peers)
+
+Peers:
+
+Bharti Airtel (BHARTIARTL)
+
+Indus Towers (INDUSTOWER)
+
+Tata Communications (TATACOMM)
+
+RailTel (RAILTEL)
+
+TTML (TTML)
+
+Slide 6A — Peer Comparison Snapshot (Vodafone Idea)
+
+Table must include columns:
+
+Stock
+
+CMP
+
+Market Cap
+
+P/E
+
+ROE %
+
+ROCE %
+
+Debt/Equity
+
+Slide 6B — Valuation Multiples (Vodafone Idea)
+
+Table must include columns:
+
+Stock
+
+PE
+
+PS
+
+PBV
+
+PEG
+
+EV/EBITDA
+
+Slide 6C — Growth Metrics (Vodafone Idea)
+
+Table must include columns:
+
+Stock
+
+Sales 1Y %
+
+Sales 3Y %
+
+EPS 1Y %
+
+EPS 3Y %
+
+Slide 6D — Efficiency Metrics (Vodafone Idea)
+
+Table must include columns:
+
+Stock
+
+ROA %
+
+ROE %
+
+ROCE %
+
+Asset Turnover
+
+CCC (Days)
+
+Valuation – Apollo Micro Systems (compared against 5 peers)
+
+Peers:
+
+Premier Energies (PREMIERENE)
+
+Kaynes Technology (KAYNES)
+
+Syrma SGS (SYRMA)
+
+Vikram Solar (VIKRAMSOLR)
+
+Avalon Technologies (AVALON)
+
+Slide 7A — Peer Comparison Snapshot (Apollo Micro Systems)
+
+Columns:
+
+Stock
+
+CMP
+
+Market Cap
+
+P/E
+
+ROE %
+
+ROCE %
+
+Debt/Equity
+
+Slide 7B — Valuation Multiples (Apollo Micro Systems)
+
+Columns:
+
+Stock
+
+PE
+
+PS
+
+PBV
+
+PEG
+
+EV/EBITDA
+
+Slide 7C — Growth Metrics (Apollo Micro Systems)
+
+Columns:
+
+Stock
+
+Sales 1Y %
+
+Sales 3Y %
+
+EPS 1Y %
+
+EPS 3Y %
+
+Slide 7D — Efficiency Metrics (Apollo Micro Systems)
+
+Columns:
+
+Stock
+
+ROA %
+
+ROE %
+
+ROCE %
+
+Asset Turnover
+
+CCC (Days)
+
+SECTION 5 — Historical Valuation Trends
+Slide 8: Historical Valuation Trends
+
+Include:
+
+1-year P/E trend
+
+3-year P/E mean & median
+
+P/B trends
+
+EV/EBITDA long-term Stability
+
+Commentary on valuation vs historic average
+
+SECTION 6 — SWOT Analysis
+Slide 9: SWOT (Vodafone Idea)
+
+Strengths (4–6)
+
+Weaknesses (4–6)
+
+Opportunities (4–6)
+
+Threats (4–6)
+
+Slide 10: SWOT (Apollo Micro Systems)
+
+Strengths
+
+Weaknesses
+
+Opportunities
+
+Threats
+
+SECTION 7 — Risks & Growth Drivers
+Slide 11: Key Risks (Company-Wise)
+
+Include:
+
+Business risks
+
+Regulatory risks
+
+Financial risks
+
+Operational risks
+
+Slide 12: Growth Drivers (Company-Wise)
+
+Include:
+
+Demand drivers
+
+Capacity/project expansion
+
+New technology adoption
+
+Sector tailwinds
+
+SECTION 8 — Investment Thesis & Recommendation
+Slide 13: Investment Thesis
+
+Include:
+
+3–5 reasons to invest
+
+Strategic rationale
+
+Competitive advantage summary
+
+Short-term outlook
+
+Long-term potential
+
+Slide 14: Final Recommendation
+
+Include:
+
+Buy / Hold / Avoid
+
+Supporting valuation
+
+Risk-adjusted view
+
+What type of investor fits the recommendation
+

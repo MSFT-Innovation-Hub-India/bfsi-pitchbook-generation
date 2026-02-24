@@ -1,0 +1,25 @@
+# Azure AI Agent Framework
+agent-framework==1.0.0b251209
+agent-framework-azure-ai==1.0.0b251209
+azure-ai-projects>=2.0.0b2
+azure-identity>=1.15.0
+
+# Azure Cosmos DB (for workflow persistence with Managed Identity)
+azure-cosmos>=4.5.0
+
+# FastAPI and Web Server
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+
+# Environment and Configuration
+python-dotenv>=1.0.0
+
+# Async Support
+aiohttp>=3.9.0
+
+# News Scraping (for news_function.py)
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Optional: PDF Generation (if needed)
+reportlab>=4.0.0

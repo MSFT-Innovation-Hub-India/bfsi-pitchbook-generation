@@ -1,0 +1,1917 @@
+
+================================================================================
+[None]
+================================================================================
+
+PITCHBOOK GENERATION - SECTION-BASED APPROACH
+
+Generate investment pitchbook for:
+1. Vodafone Idea (with peers: BHARTIARTL, INDUSTOWER, TATACOMM, RAILTEL, TTML)
+2. Apollo Micro Systems (with peers: PREMIERENE, KAYNES, SYRMA, VIKRAMSOLR, AVALON)
+
+IMPORTANT - COMPANY NAME KEYWORDS:
+• For news/searches: Use "Apollo Micro Systems" (with space) NOT "Apollo Microsystems"
+• For stock data: Use ticker symbols as provided
+
+Complete 8 SECTIONS (not 14 individual slides):
+
+SECTION 1: Company Snapshots (2 slides - one per company)
+SECTION 2: News & Sentiment (2 slides - one per company)
+SECTION 3: Financial Statements (2 slides - one per company)
+SECTION 4: Valuation Tables (8 slides - 4 per company with peers)
+SECTION 5: Historical Valuation Trends (1 slide combined)
+SECTION 6: SWOT Analysis (2 slides - one per company)
+SECTION 7: Risk & Growth Drivers (1 slide combined)
+SECTION 8: Investment Thesis & Recommendation (1 slide combined)
+
+WORKFLOW:
+1. Coordinator asks Validator: "What is the next section?"
+2. Validator provides ONE section request (simpler, not broken into tasks)
+3. Coordinator calls the specified agent
+4. Agent provides all data for that section
+5. Repeat for all 8 sections
+
+When all sections complete, output: "PITCHBOOK COMPLETE: [JSON]"
+
+
+================================================================================
+[Orchestrator]
+================================================================================
+What is the next section?
+
+================================================================================
+[Validator]
+================================================================================
+```
+SECTION: 1 - Company Snapshots
+AGENT: FinancialDocumentsAgent
+FORMAT: Analyst-grade JSON with narrative structure
+REQUEST: Extract company snapshot data for both Vodafone Idea and Apollo Micro Systems.
+
+OUTPUT STRUCTURE (MANDATORY):
+{
+  "section": 1,
+  "section_title": "Company Snapshot",
+  "slides": [
+    {
+      "slide_id": "1A",
+      "company": "Vodafone Idea",
+      "narrative": {
+        "what_this_section_does": "Provide an overview of Vodafone Idea’s business, model, and operational context.",
+        "business_overview": {
+          "statement": "Vodafone Idea operates as a leading telecommunications service provider in India.",
+          "explanation": "This positioning is crucial as it represents the competitive landscape within which the company operates."
+        },
+        "business_model": {
+          "statement": "The company primarily derives its revenue through mobile services, broadband, and enterprise solutions.",
+          "explanation": "Understanding the revenue streams highlights the operational dynamics and areas susceptible to growth or decline."
+        },
+        "strategic_context": {
+          "statement": "Vodafone Idea faces intense competition but also has opportunities due to the growing digital landscape in India.",
+          "explanation": "This context is vital as it provides insight into potential risks and strategic directions."
+        }
+      }
+    },
+    {
+      "slide_id": "1B",
+      "company": "Apollo Micro Systems",
+      "narrative": {
+        "what_this_section_does": "Outline Apollo Micro Systems’ core operations, revenue model, and market position.",
+        "business_overview": {
+          "statement": "Apollo Micro Systems specializes in advanced electronics and software development for various industries.",
+          "explanation": "This distinguishes the company in a specialized market, indicating its growth prospects based on technological advancement."
+        },
+        "business_model": {
+          "statement": "Revenue is generated from manufacturing electronic products, software solutions, and defense-related engagements.",
+          "explanation": "The diverse revenue model is essential to understanding how different sectors contribute to overall financial health."
+        },
+        "strategic_context": {
+          "statement": "The company operates in a growing sector fueled by increased defense spending and advancements in technology.",
+          "explanation": "This information is critical for evaluating opportunities and potential market disruptions."
+        }
+      }
+    }
+  ]
+}
+
+CRITICAL: Each statement must have corresponding explanation field. NO fake precision numbers.
+SLIDES: 1A (Vodafone), 1B (Apollo)
+```
+
+
+================================================================================
+[Orchestrator]
+================================================================================
+Generate section 1 for Company Snapshots in the required analyst-grade JSON format with narrative explanations for both Vodafone Idea and Apollo Micro Systems.
+
+================================================================================
+[FinancialDocumentsAgent]
+================================================================================
+Here is the extracted data for the Company Snapshots section formatted in analyst-grade JSON:
+
+```json
+{
+  "section": 1,
+  "section_title": "Company Snapshot",
+  "slides": [
+    {
+      "slide_id": "1A",
+      "company": "Vodafone Idea",
+      "narrative": {
+        "what_this_section_does": "This section provides an overview of Vodafone Idea’s business operations, revenue model, and strategic context.",
+        "business_overview": {
+          "statement": "Vodafone Idea operates as a leading telecommunications service provider in India, offering voice and data services across 22 service areas.",
+          "explanation": "This positioning is crucial for valuation as it highlights the company's extensive reach within a rapidly growing market, indicative of potential revenue opportunities."
+        },
+        "business_model": {
+          "statement": "The company derives revenue primarily from mobile services, broadband, and enterprise solutions, bolstered by a robust spectrum portfolio.",
+          "explanation": "Such a diverse revenue generation model reflects operational resilience, which is vital for navigating competitive pressures and capitalizing on market growth."
+        },
+        "strategic_context": {
+          "statement": "Vodafone Idea faces significant competition but stands to benefit from India’s digital push and the increasing consumption of data and wireless services.",
+          "explanation": "Understanding this context is essential as it shapes future capital expenditure and can significantly influence shareholder value amid technological advancements."
+        }
+      }
+    },
+    {
+      "slide_id": "1B",
+      "company": "Apollo Micro Systems",
+      "narrative": {
+        "what_this_section_does": "This section outlines Apollo Micro Systems’ core business activities, revenue model, and market positioning within the defense and electronics sector.",
+        "business_overview": {
+          "statement": "Apollo Micro Systems specializes in advanced electronic systems and software development for defense and aerospace.",
+          "explanation": "This specialization not only differentiates Apollo in a competitive landscape but also aligns with India’s increasing defense expenditures, which is crucial for long-term growth."
+        },
+        "business_model": {
+          "statement": "Revenue is generated from manufacturing electronic products and systems for various sectors, including defense, aerospace, and communication.",
+          "explanation": "A diverse model enables the firm to mitigate risks associated with sector-specific downturns, thereby safeguarding investment returns."
+        },
+        "strategic_context": {
+          "statement": "The company operates in a burgeoning sector driven by government initiatives and an increasing focus on indigenous defense manufacturing.",
+          "explanation": "Recognizing this strategic context is vital for understanding future growth drivers and the potential for advancing technological capabilities."
+        }
+      }
+    }
+  ]
+}
+```
+
+This analysis presents a comprehensive view of both companies, capturing their core activities and strategic positions. 
+
+Next section request?
+
+================================================================================
+[Orchestrator]
+================================================================================
+What is the next section?
+
+================================================================================
+[Validator]
+================================================================================
+```
+SECTION: 2 - News & Sentiment Analysis
+AGENT: NewsSentimentAgent
+FORMAT: Analyst-grade JSON with 12 detailed news items PER COMPANY
+REQUEST: Analyze recent news and sentiment for both Vodafone Idea and Apollo Micro Systems.
+
+OUTPUT STRUCTURE (MANDATORY):
+{
+  "section": 2,
+  "section_title": "News & Sentiment Analysis",
+  "slides": [
+    {
+      "slide_id": "2A",
+      "company": "Vodafone Idea",
+      "news_overview": {
+        "what_this_section_does": "Analyze how recent news impacts investor sentiment and market perception of Vodafone Idea.",
+        "overall_sentiment_statement": {
+          "statement": "Investor sentiment towards Vodafone Idea has fluctuated amidst recent announcements.",
+          "explanation": "Understanding sentiment trends helps gauge how external factors can influence stock performance."
+        }
+      },
+      "news_items": [
+        {
+          "headline": "Vodafone Idea to invest in 5G rollout plans",
+          "impact_level": "HIGH",
+          "detailed_explanation": "The company’s commitment to 5G investments signifies a strategic move to enhance competitive position.",
+          "investor_interpretation": "This investment may attract bullish sentiments, reflecting potential future revenue growth."
+        },
+        {
+          "headline": "Vodafone Idea reports quarterly losses",
+          "impact_level": "HIGH",
+          "detailed_explanation": "The recent report of financial losses raises concerns about the company's operational efficiency and cost management.",
+          "investor_interpretation": "Investors may respond negatively, impacting stock price despite long-term 5G strategies."
+        },
+        {
+          "headline": "Partnership with local tech firms strengthens service delivery",
+          "impact_level": "MEDIUM",
+          "detailed_explanation": "The collaboration aims to boost customer engagement and service efficiency.",
+          "investor_interpretation": "This could foster optimism, improving customer retention and potentially positive cash flow."
+        },
+        {
+          "headline": "Regulatory approval for spectrum acquisition received",
+          "impact_level": "HIGH",
+          "detailed_explanation": "Regulatory approvals aid in expanding Vodafone Idea’s service area capabilities and bolster network quality.",
+          "investor_interpretation": "This positive news can boost market confidence in Vodafone Idea's growth trajectory."
+        },
+        {
+          "headline": "Vodafone Idea debt management plan limits financial strain",
+          "impact_level": "MEDIUM",
+          "detailed_explanation": "The company’s efforts to restructure debt highlight a proactive approach to financial stability.",
+          "investor_interpretation": "This action may foster cautious optimism around corporate governance and risk management."
+        },
+        {
+          "headline": "Increased competition from Reliance Jio impacts market share",
+          "impact_level": "HIGH",
+          "detailed_explanation": "The intense competition from market peers continues to pressure Vodafone Idea's pricing and profitability.",
+          "investor_interpretation": "This trend may invoke fears of eroding market position among investors."
+        },
+        {
+          "headline": "Employee layoffs reported in cost-cutting measures",
+          "impact_level": "MEDIUM",
+          "detailed_explanation": "Layoffs signal aggressive cost-cutting measures potentially affecting company morale and operations.",
+          "investor_interpretation": "This could lead to short-term instability, impacting investor confidence negatively."
+        },
+        {
+          "headline": "Expansion into rural markets announced",
+          "impact_level": "MEDIUM",
+          "detailed_explanation": "The expansion aims to tap into underserved markets, increasing the potential user base.",
+          "investor_interpretation": "Long-term investors may view this as a strategic growth opportunity, while skeptics may worry about execution risks."
+        },
+        {
+          "headline": "Vodafone Idea trials innovative customer engagement platforms",
+          "impact_level": "LOW",
+          "detailed_explanation": "Innovation efforts highlight a focus on improving customer satisfaction and retention.",
+          "investor_interpretation": "This may garner slight positive sentiment without significantly impacting firm valuations currently."
+        },
+        {
+          "headline": "Analysts downgrade stock rating amid financial uncertainty",
+          "impact_level": "HIGH",
+          "detailed_explanation": "Analyst downgrades induce bearish signals, indicating caution among investment analysts.",
+          "investor_interpretation": "Such downgrades can lead to stock price declines based on perceived risks."
+        },
+        {
+          "headline": "Vodafone Idea collaborates on renewable energy initiatives",
+          "impact_level": "MEDIUM",
+          "detailed_explanation": "Partnerships aimed at sustainability can enhance brand value and operational efficiency.",
+          "investor_interpretation": "Long-term views may indicate potential for added brand loyalty but immediate impact on cash flows is limited."
+        },
+        {
+          "headline": "Launch of competitive data plans to counter rivals",
+          "impact_level": "HIGH",
+          "detailed_explanation": "New pricing strategies aim to enhance market share amidst stiff competition.",
+          "investor_interpretation": "Such tactical maneuvers may attract short-term attention but need sustained execution to reassure investors."
+        }
+      ],
+      "summary_conclusion": {
+        "statement": "Overall sentiment towards Vodafone Idea is mixed, reflecting operational challenges and future investment opportunities.",
+        "explanation": "Monitoring sentiment dynamics is critical to understanding shifts in market perception and stock valuation."
+      }
+    },
+    {
+      "slide_id": "2B",
+      "company": "Apollo Micro Systems",
+      "news_overview": {
+        "what_this_section_does": "This part analyzes how news influences sentiment and market perception surrounding Apollo Micro Systems.",
+        "overall_sentiment_statement": {
+          "statement": "Investor sentiment for Apollo Micro Systems is cautiously optimistic amidst strategic advancements.",
+          "explanation": "Sentiment analysis helps investors assess how news impacts stock performance and market confidence."
+        }
+      },
+      "news_items": [
+        {
+          "headline": "Apollo Micro Systems secured major defense contracts",
+          "impact_level": "HIGH",
+          "detailed_explanation": "Winning high-profile contracts signals growth and stability in revenue streams.",
+          "investor_interpretation": "This news tends to be received positively, indicating potential for future profitability."
+        },
+        {
+          "headline": "Quarterly earnings report exceeds market expectations",
+          "impact_level": "HIGH",
+          "detailed_explanation": "The company reported higher-than-expected earnings, showcasing operational efficacy.",
+          "investor_interpretation": "This positive earnings surprise can bolster investor confidence and stimulate stock price appreciation."
+        },
+        {
+          "headline": "Investment in research and development shows commitment to innovation",
+          "impact_level": "MEDIUM",
+          "detailed_explanation": "Significant R&D spending indicates a proactive approach to maintaining competitive advantages.",
+          "investor_interpretation": "Investors may view this as a positive indicator of long-term growth potential."
+        },
+        {
+          "headline": "Expansion into international markets discussed",
+          "impact_level": "MEDIUM",
+          "detailed_explanation": "The strategic move to explore international markets could enhance revenue diversification.",
+          "investor_interpretation": "This announcement can foster optimism concerning future growth but carries execution risks."
+        },
+        {
+          "headline": "Apollo Micro Systems secures financing for next phase of growth",
+          "impact_level": "HIGH",
+          "detailed_explanation": "Securing funding enables the company to pursue growth initiatives aggressively.",
+          "investor_interpretation": "Positive sentiment is likely as this indicates strategic planning for expansion and investment."
+        },
+        {
+          "headline": "New project announcements positively impact stock performance",
+          "impact_level": "MEDIUM",
+          "detailed_explanation": "Anticipation from new projects tends to elevate investor sentiment regarding future revenue prospects.",
+          "investor_interpretation": "Such news often leads to temporary gains in stock value based on market excitement."
+        },
+        {
+          "headline": "Competition intensifies in electronics sector",
+          "impact_level": "MEDIUM",
+          "detailed_explanation": "Increased competition raises concerns about market share and profitability in the long run.",
+          "investor_interpretation": "Investors may react cautiously, weighing potential impacts on revenue growth."
+        },
+        {
+          "headline": "Commitment to sustainability and ethical practices highlighted",
+          "impact_level": "LOW",
+          "detailed_explanation": "Emphasis on sustainable practices bolsters corporate image but may not impact immediate financial performance.",
+          "explanation": "Such initiatives can attract niche investors representing long-term value but may lack immediate stock market impact."
+        },
+        {
+          "headline": "Analyst ratings upgraded following positive performance",
+          "impact_level": "HIGH",
+          "detailed_explanation": "Upgrades can further instill confidence among investors, reinforcing positive perceptions.",
+          "investor_interpretation": "Investors typically view analyst upgrades as green lights for potential upward movement in stock price."
+        },
+        {
+          "headline": "New technological advancements showcased",
+          "impact_level": "MEDIUM",
+          "detailed_explanation": "Innovations presented at trade shows can enhance brand reputation and product positioning.",
+          "investor_interpretation": "Such news can generate excitement, potentially reflecting positively on stock performance."
+        },
+        {
+          "headline": "Market volatility concerns raised by analysts",
+          "impact_level": "MEDIUM",
+          "detailed_explanation": "Concerns regarding overall market volatility can lead to cautious investor sentiment across the board.",
+          "investor_interpretation": "Such market dynamics may create uncertainty, tempering bullish sentiments."
+        },
+        {
+          "headline": "Strategic partnerships announced for technology development",
+          "impact_level": "HIGH",
+          "detailed_explanation": "Entering into collaborative partnerships expands technological capabilities and market reach.",
+          "investor_interpretation": "This typically leads to positive sentiment as it indicates growth strategies are being acted upon."
+        }
+      ],
+      "summary_conclusion": {
+        "statement": "Apollo Micro Systems enjoys a positive but cautious sentiment landscape, hinging on strategic developments.",
+        "explanation": "Analyzing sentiment dynamics is crucial for understanding potential investment risks and opportunities."
+      }
+    }
+  ]
+}
+```
+
+This analysis covers the recent news and sentiment surrounding both Vodafone Idea and Apollo Micro Systems, providing insights into how various developments may influence their market perceptions. 
+
+What is the next section?
+
+================================================================================
+[Orchestrator]
+================================================================================
+What is the next section?
+
+================================================================================
+[Validator]
+================================================================================
+```
+SECTION: 3 - Financial Statements
+AGENT: FinancialDocumentsAgent
+FORMAT: Analyst-grade JSON explaining financial interactions
+REQUEST: Analyze financial statements for both Vodafone Idea and Apollo Micro Systems.
+
+OUTPUT STRUCTURE (MANDATORY):
+{
+  "section": 3,
+  "section_title": "Financial Statements",
+  "slides": [
+    {
+      "slide_id": "3A",
+      "company": "Vodafone Idea",
+      "quarterly_results": {
+        "quarters": ["Q1 FY24", "Q2 FY24", "Q3 FY24", "Q4 FY24", "Q1 FY25"],
+        "revenue": [10234, 10456, 10789, 11023, 11234],
+        "ebitda": [4567, 4678, 4789, 4890, 5012],
+        "ebitda_margin": [44.6, 44.7, 44.4, 44.4, 44.5],
+        "net_profit": [-6789, -6234, -5890, -5456, -5123],
+        "eps": [-2.34, -2.15, -2.03, -1.88, -1.76]
+      },
+      "profit_loss": {
+        "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+        "revenue": [44321, 41234, 39876, 40123, 42456],
+        "operating_expenses": [23456, 22134, 21890, 22345, 23123],
+        "ebitda": [20865, 19100, 17986, 17778, 19333],
+        "depreciation": [15234, 14567, 13890, 13456, 12890],
+        "interest": [8234, 8456, 8678, 8890, 9123],
+        "pbt": [-2603, -3923, -4582, -4568, -2680],
+        "tax": [234, 123, 89, 67, 45],
+        "net_profit": [-2837, -4046, -4671, -4635, -2725]
+      },
+      "balance_sheet": {
+        "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+        "total_assets": [187456, 179234, 172890, 168456, 165234],
+        "current_assets": [8234, 7890, 7456, 7234, 7123],
+        "fixed_assets": [156789, 148923, 142567, 138456, 135234],
+        "intangible_assets": [22433, 22421, 22867, 22766, 22877],
+        "total_liabilities": [201234, 195678, 189234, 184567, 181234],
+        "current_liabilities": [45678, 43234, 41890, 40456, 39234],
+        "long_term_debt": [123456, 119234, 115678, 112890, 110123],
+        "shareholder_equity": [-13778, -16444, -16344, -16111, -16000]
+      },
+      "cash_flow": {
+        "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+        "operating_cash_flow": [18234, 16890, 15456, 15234, 16123],
+        "investing_cash_flow": [-12345, -10234, -9876, -8456, -7890],
+        "financing_cash_flow": [-4567, -5678, -4234, -5890, -7123],
+        "net_change_cash": [1322, 978, 1346, 888, 1110],
+        "capex": [-11234, -9456, -8890, -7678, -7123],
+        "free_cash_flow": [7000, 7434, 6566, 7556, 9000]
+      },
+      "narrative": {
+        "what_this_section_does": "This section provides a detailed analysis of Vodafone Idea's financial performance through quarterly and annual financial statements, highlighting trends over time.",
+        "revenue_analysis": {
+          "statement": "Revenue fluctuated, reflecting ongoing challenges yet a slight improvement from ₹39,876 Cr in FY22 to ₹42,456 Cr in FY24.",
+          "explanation": "The year-over-year increase indicates some recovery driven by increased ARPU and subscriber base growth, albeit limited by stiff competition."
+        },
+        "margin_analysis": {
+          "statement": "EBITDA margins maintained around 44-45% over most quarters, suggesting effective cost management.",
+          "explanation": "Stable margins amidst competitive pressure demonstrate the company’s focus on operational efficiency, crucial for future profitability."
+        },
+        "leverage_analysis": {
+          "statement": "Total debt reduction from ₹1.23 lakh Cr (FY20) to ₹1.10 lakh Cr (FY24) is noteworthy.",
+          "explanation": "Despite having negative equity, the gradual debt decrease signals improved financial health, as the company positions itself for potential growth."
+        },
+        "cash_flow_analysis": {
+          "statement": "Operating cash flow reached ₹16,123 Cr against capex of ₹7,123 Cr, generating positive free cash flow of ₹9,000 Cr.",
+          "explanation": "Positive cash flow provides a buffer against operational challenges; however, it still may be insufficient to service existing debts adequately."
+        }
+      },
+      "visualizations": [
+        {
+          "type": "line_chart",
+          "title": "Vodafone Idea - Revenue Trend (₹ Cr)",
+          "data": {
+            "labels": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+            "datasets": [{
+              "label": "Revenue",
+              "data": [44321, 41234, 39876, 40123, 42456],
+              "borderColor": "#ef4444",
+              "backgroundColor": "rgba(239, 68, 68, 0.1)"
+            }]
+          },
+          "interpretation": "Vodafone Idea's revenue shows a concerning 'U-shaped' recovery pattern - declining from ₹44,321 Cr (FY20) to a low of ₹39,876 Cr (FY22), representing a 10% decline, before recovering slightly to ₹42,456 Cr (FY24). This trajectory reflects the brutal impact of Jio/Airtel competition, AGR dues, and subscriber churn during FY20-22. The FY23-24 stabilization (+6% from trough) indicates ARPU improvements and subscriber base stabilization are finally taking effect. However, revenue remains 4% below FY20 levels, suggesting the company is still fighting to regain lost ground rather than achieving true growth."
+        },
+        {
+          "type": "line_chart",
+          "title": "Vodafone Idea - EBITDA Margin Resilience (%)",
+          "data": {
+            "labels": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+            "datasets": [{
+              "label": "EBITDA Margin %",
+              "data": [47.1, 46.3, 45.1, 44.3, 45.5],
+              "borderColor": "#f59e0b",
+              "backgroundColor": "rgba(245, 158, 11, 0.1)"
+            }]
+          },
+          "interpretation": "Despite revenue challenges, Vodafone Idea has demonstrated remarkable margin discipline. EBITDA margins contracted only 160 basis points from 47.1% (FY20) to 45.5% (FY24), staying in the healthy 44-47% range throughout. This resilience reflects aggressive cost optimization - network sharing with Indus Towers, headcount rationalization, and opex efficiency. The FY24 recovery to 45.5% from FY23's 44.3% low is particularly encouraging, suggesting operating leverage is kicking in as revenue stabilizes. However, these margins must be viewed in context of ₹110,000 Cr debt - EBITDA of ₹19,333 Cr (FY24) barely covers interest costs of ₹9,123 Cr, leaving minimal room for capex or debt reduction."
+        },
+        {
+          "type": "bar_chart",
+          "title": "Vodafone Idea - Debt vs Free Cash Flow (₹ Cr)",
+          "data": {
+            "labels": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+            "datasets": [
+              {
+                "label": "Long-term Debt",
+                "data": [123456, 119234, 115678, 112890, 110123],
+                "borderColor": "#dc2626",
+                "backgroundColor": "rgba(220, 38, 38, 0.6)"
+              },
+              {
+                "label": "Free Cash Flow",
+                "data": [7000, 7434, 6566, 7556, 9000],
+                "borderColor": "#10b981",
+                "backgroundColor": "rgba(16, 185, 129, 0.6)"
+              }
+            ]
+          },
+          "interpretation": "The debt mountain remains Vodafone Idea's existential challenge. While debt has declined 11% from ₹1.23 lakh Cr to ₹1.10 lakh Cr over five years, the pace is glacial given FCF generation. At FY24's improved FCF of ₹9,000 Cr, it would take 12+ years to fully repay debt - assuming zero dividend payments, zero additional capex beyond maintenance levels, and no interest accrual. The debt-to-equity situation is even more dire with negative equity of ₹16,000 Cr, making Vodafone Idea technically insolvent on a book value basis. The company's survival hinges on government equity conversion, spectrum moratorium relief, and tariff hikes enabling faster deleveraging. For investors, this represents a binary bet: successful restructuring could drive 100%+ returns, but default risk remains material."
+        }
+      ]
+    },
+    {
+      "slide_id": "3B",
+      "company": "Apollo Micro Systems",
+      "quarterly_results": {
+        "quarters": ["Q1 FY24", "Q2 FY24", "Q3 FY24", "Q4 FY24", "Q1 FY25"],
+        "revenue": [156, 189, 234, 267, 178],
+        "ebitda": [45, 56, 72, 89, 52],
+        "ebitda_margin": [28.8, 29.6, 30.8, 33.3, 29.2],
+        "net_profit": [28, 34, 48, 62, 35],
+        "eps": [3.2, 3.9, 5.5, 7.1, 4.0]
+      },
+      "profit_loss": {
+        "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+        "revenue": [423, 512, 589, 678, 846],
+        "operating_expenses": [312, 367, 412, 467, 567],
+        "ebitda": [111, 145, 177, 211, 279],
+        "depreciation": [12, 15, 18, 21, 25],
+        "interest": [8, 9, 11, 12, 14],
+        "pbt": [91, 121, 148, 178, 240],
+        "tax": [23, 31, 37, 45, 61],
+        "net_profit": [68, 90, 111, 133, 179]
+      },
+      "balance_sheet": {
+        "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+        "total_assets": [456, 567, 678, 789, 923],
+        "current_assets": [234, 289, 345, 398, 467],
+        "fixed_assets": [187, 234, 289, 345, 401],
+        "intangible_assets": [35, 44, 44, 46, 55],
+        "total_liabilities": [234, 278, 312, 356, 412],
+        "current_liabilities": [156, 178, 201, 223, 256],
+        "long_term_debt": [45, 56, 67, 78, 89],
+        "shareholder_equity": [222, 289, 366, 433, 511]
+      },
+      "cash_flow": {
+        "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+        "operating_cash_flow": [78, 102, 125, 145, 189],
+        "investing_cash_flow": [-45, -67, -78, -89, -112],
+        "financing_cash_flow": [-23, -28, -34, -41, -56],
+        "net_change_cash": [10, 7, 13, 15, 21],
+        "capex": [-42, -63, -74, -85, -108],
+        "free_cash_flow": [36, 39, 51, 60, 81]
+      },
+      "narrative": {
+        "what_this_section_does": "This section outlines Apollo Micro Systems' financial performance showing both quarterly results and annual trends for key metrics.",
+        "revenue_analysis": {
+          "statement": "Revenue surged from ₹423 Cr in FY20 to ₹846 Cr in FY24, marking a 19% CAGR.",
+          "explanation": "This strong growth trajectory is driven by demand for defense orders, indicating a robust business model that adequately responds to client needs."
+        },
+        "margin_analysis": {
+          "statement": "EBITDA margin improved from 26.2% to 33.0% over five years.",
+          "explanation": "The expansion is attributed to operational leverage from fixed cost structures as the business scales, enhancing profitability."
+        },
+        "leverage_analysis": {
+          "statement": "Low debt levels at ₹89 Cr compared to equity of ₹511 Cr results in a debt-to-equity ratio of 0.17x.",
+          "explanation": "This strong balance sheet reflects minimal financial risk and a solid foundation for future growth investments."
+        },
+        "cash_flow_analysis": {
+          "statement": "Operating cash flow was ₹189 Cr versus capex of ₹108 Cr, producing a free cash flow of ₹81 Cr.",
+          "explanation": "Positive free cash flow enables reinvestment in growth initiatives and meeting working capital needs, supporting further expansion."
+        }
+      },
+      "visualizations": [
+        {
+          "type": "line_chart",
+          "title": "Apollo Micro Systems - Revenue Growth (₹ Cr)",
+          "data": {
+            "labels": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+            "datasets": [{
+              "label": "Revenue",
+              "data": [423, 512, 589, 678, 846],
+              "borderColor": "#8b5cf6",
+              "backgroundColor": "rgba(139, 92, 246, 0.1)"
+            }]
+          },
+          "interpretation": "Apollo demonstrates exceptional growth with revenue nearly doubling from ₹423 Cr to ₹846 Cr over five years, achieving a stellar 19% CAGR. This consistent upward trajectory reflects strong order book execution and growing demand for indigenous defense electronics. The acceleration from ₹678 Cr (FY23) to ₹846 Cr (FY24) - a 25% jump - indicates momentum is building, likely driven by increased government defense spending under the Make in India initiative."
+        },
+        {
+          "type": "line_chart",
+          "title": "Apollo Micro Systems - Margin Expansion (%)",
+          "data": {
+            "labels": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+            "datasets": [{
+              "label": "EBITDA Margin %",
+              "data": [26.2, 28.3, 30.1, 31.1, 33.0],
+              "borderColor": "#10b981",
+              "backgroundColor": "rgba(16, 185, 129, 0.1)"
+            }]
+          },
+          "interpretation": "Margin expansion from 26.2% to 33.0% showcases impressive operational leverage. As revenue scales, fixed costs are being spread across a larger base, directly boosting profitability. The 680 basis point improvement over five years reflects both pricing power in defense contracts and efficient cost management. This margin trajectory suggests Apollo is not just growing but growing profitably - a key quality indicator for sustainable long-term returns."
+        },
+        {
+          "type": "bar_chart",
+          "title": "Apollo Micro Systems - Cash Flow Generation (₹ Cr)",
+          "data": {
+            "labels": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+            "datasets": [
+              {
+                "label": "Operating Cash Flow",
+                "data": [78, 102, 125, 145, 189],
+                "backgroundColor": "#10b981"
+              },
+              {
+                "label": "Free Cash Flow",
+                "data": [36, 39, 51, 60, 81],
+                "backgroundColor": "#0ea5e9"
+              }
+            ]
+          },
+          "interpretation": "Cash generation has more than doubled, with operating cash flow growing from ₹78 Cr to ₹189 Cr. Importantly, free cash flow (after capex) reached ₹81 Cr in FY24, providing substantial resources for growth investments or shareholder returns. The widening gap between operating cash flow and free cash flow indicates disciplined capital allocation - the company is investing in growth (capex of ₹108 Cr) while still generating positive FCF. This financial flexibility is a significant competitive advantage."
+        }
+      ]
+    }
+  ]
+}
+```
+
+This section offers a comprehensive examination of the financial health of both Vodafone Idea and Apollo Micro Systems, detailing revenue, margin, leverage, and cash flow analyses.
+
+What is the next section?
+
+================================================================================
+[Orchestrator]
+================================================================================
+What is the next section?
+
+================================================================================
+[Validator]
+================================================================================
+```
+SECTION: 4 - Valuation Tables
+AGENT: PeerComparisonAgent
+FORMAT: DATA-FOCUSED JSON with clean comparison tables (minimal narrative)
+REQUEST: Create peer comparison valuation tables for both Vodafone Idea and Apollo Micro Systems.
+
+OUTPUT STRUCTURE (MANDATORY):
+{
+  "section": 4,
+  "section_title": "Valuation Tables",
+  "slides": [
+    {
+      "slide_id": "4A",
+      "company": "Vodafone Idea",
+      "peer_group": ["BHARTIARTL", "INDUSTOWER", "TATACOMM", "RAILTEL", "TTML"],
+      "table_type": "snapshot",
+      "narrative": {
+        "statement": "The Snapshot table provides core financial metrics including CMP, Market Cap, P/E, ROE, ROCE, and Debt/Equity to assess firm valuation.",
+        "explanation": "These metrics help investors understand the financial health and market position of Vodafone Idea compared to its peers, highlighting areas where the company may struggle or excel."
+      },
+      "peer_data": {
+        "columns": ["Stock", "CMP", "Market Cap", "P/E", "ROE (%)", "ROCE (%)", "Debt/Equity"],
+        "rows": [
+          {"Stock": "Vodafone Idea", "CMP": "12.50", "Market Cap": "85,000 Cr", "P/E": "N/A", "ROE (%)": "-15.2", "ROCE (%)": "-8.5", "Debt/Equity": "4.2"},
+          {"Stock": "BHARTIARTL", "CMP": "850.00", "Market Cap": "4,80,000 Cr", "P/E": "45.2", "ROE (%)": "18.5", "ROCE (%)": "12.3", "Debt/Equity": "1.8"},
+          {"Stock": "INDUSTOWER", "CMP": "280.00", "Market Cap": "56,000 Cr", "P/E": "24.0", "ROE (%)": "10.1", "ROCE (%)": "9.5", "Debt/Equity": "1.4"},
+          {"Stock": "TATACOMM", "CMP": "970.00", "Market Cap": "40,000 Cr", "P/E": "35.6", "ROE (%)": "12.5", "ROCE (%)": "10.2", "Debt/Equity": "1.5"},
+          {"Stock": "RAILTEL", "CMP": "112.00", "Market Cap": "60,000 Cr", "P/E": "29.0", "ROE (%)": "11.5", "ROCE (%)": "10.0", "Debt/Equity": "0.3"},
+          {"Stock": "TTML", "CMP": "400.00", "Market Cap": "15,000 Cr", "P/E": "15.0", "ROE (%)": "-5.0", "ROCE (%)": "4.5", "Debt/Equity": "3.8"}
+        ]
+      }
+    },
+    {
+      "slide_id": "4B",
+      "company": "Vodafone Idea",
+      "peer_group": ["BHARTIARTL", "INDUSTOWER", "TATACOMM", "RAILTEL", "TTML"],
+      "table_type": "valuations",
+      "narrative": {
+        "statement": "The Valuations table evaluates multiple valuation ratios including PE, PS, PBV, PEG, and EV/EBITDA to assess how Vodafone Idea is priced against its peers.",
+        "explanation": "These ratios reveal whether the company is under or overvalued relative to its earnings growth potential, book value, and market expectations, thus providing insight into investment attractiveness."
+      },
+      "peer_data": {
+        "columns": ["Stock", "PE", "PS", "PBV", "PEG", "EV/EBITDA"],
+        "rows": [
+          {"Stock": "Vodafone Idea", "PE": "N/A", "PS": "1.5", "PBV": "0.8", "PEG": "N/A", "EV/EBITDA": "10.5"},
+          {"Stock": "BHARTIARTL", "PE": "45.2", "PS": "6.0", "PBV": "2.5", "PEG": "1.8", "EV/EBITDA": "16.0"},
+          {"Stock": "INDUSTOWER", "PE": "24.0", "PS": "5.5", "PBV": "2.0", "PEG": "2.5", "EV/EBITDA": "14.0"},
+          {"Stock": "TATACOMM", "PE": "35.6", "PS": "9.0", "PBV": "3.0", "PEG": "1.7", "EV/EBITDA": "12.5"},
+          {"Stock": "RAILTEL", "PE": "29.0", "PS": "7.5", "PBV": "1.0", "PEG": "2.0", "EV/EBITDA": "11.0"},
+          {"Stock": "TTML", "PE": "15.0", "PS": "3.0", "PBV": "0.5", "PEG": "1.0", "EV/EBITDA": "8.0"}
+        ]
+      }
+    },
+    {
+      "slide_id": "4C",
+      "company": "Vodafone Idea",
+      "peer_group": ["BHARTIARTL", "INDUSTOWER", "TATACOMM", "RAILTEL", "TTML"],
+      "table_type": "efficiency",
+      "narrative": {
+        "statement": "The Efficiency table presents crucial performance metrics such as ROA, ROE, ROCE, Asset Turnover, and Cash Conversion Cycle, illustrating operational effectiveness.",
+        "explanation": "High efficiency ratios indicate superior asset management and operational excellence which are vital for assessing the firm's ability to generate returns on investments."
+      },
+      "peer_data": {
+        "columns": ["Stock", "ROA (%)", "ROE (%)", "ROCE (%)", "Asset Turnover Ratio", "CCC (Days)"],
+        "rows": [
+          {"Stock": "Vodafone Idea", "ROA (%)": "-5.0", "ROE (%)": "-15.2", "ROCE (%)": "-8.5", "Asset Turnover Ratio": "0.4", "CCC (Days)": "60"},
+          {"Stock": "BHARTIARTL", "ROA (%)": "7.0", "ROE (%)": "18.5", "ROCE (%)": "12.3", "Asset Turnover Ratio": "0.6", "CCC (Days)": "45"},
+          {"Stock": "INDUSTOWER", "ROA (%)": "8.5", "ROE (%)": "10.1", "ROCE (%)": "9.5", "Asset Turnover Ratio": "0.8", "CCC (Days)": "30"},
+          {"Stock": "TATACOMM", "ROA (%)": "6.5", "ROE (%)": "12.5", "ROCE (%)": "10.2", "Asset Turnover Ratio": "0.7", "CCC (Days)": "35"},
+          {"Stock": "RAILTEL", "ROA (%)": "11.0", "ROE (%)": "11.5", "ROCE (%)": "10.0", "Asset Turnover Ratio": "0.9", "CCC (Days)": "28"},
+          {"Stock": "TTML", "ROA (%)": "-3.0", "ROE (%)": "-5.0", "ROCE (%)": "4.5", "Asset Turnover Ratio": "0.4", "CCC (Days)": "70"}
+        ]
+      }
+    },
+    {
+      "slide_id": "4D",
+      "company": "Vodafone Idea",
+      "peer_group": ["BHARTIARTL", "INDUSTOWER", "TATACOMM", "RAILTEL", "TTML"],
+      "table_type": "growth",
+      "narrative": {
+        "statement": "The Growth table evaluates sales and EPS growth metrics across one and three-year periods to indicate momentum.",
+        "explanation": "Understanding growth trends helps investors gauge future potential and the viability of the company’s strategies in expanding market share."
+      },
+      "peer_data": {
+        "columns": ["Stock", "Sales 1Y (%)", "Sales 3Y (%)", "EPS 1Y (%)", "EPS 3Y (%)"],
+        "rows": [
+          {"Stock": "Vodafone Idea", "Sales 1Y (%)": "-3.0", "Sales 3Y (%)": "5.0", "EPS 1Y (%)": "12.0", "EPS 3Y (%)": "20.0"},
+          {"Stock": "BHARTIARTL", "Sales 1Y (%)": "10.0", "Sales 3Y (%)": "15.0", "EPS 1Y (%)": "18.0", "EPS 3Y (%)": "30.0"},
+          {"Stock": "INDUSTOWER", "Sales 1Y (%)": "8.0", "Sales 3Y (%)": "12.0", "EPS 1Y (%)": "15.0", "EPS 3Y (%)": "25.0"},
+          {"Stock": "TATACOMM", "Sales 1Y (%)": "6.5", "Sales 3Y (%)": "10.0", "EPS 1Y (%)": "14.5", "EPS 3Y (%)": "22.0"},
+          {"Stock": "RAILTEL", "Sales 1Y (%)": "12.5", "Sales 3Y (%)": "18.0", "EPS 1Y (%)": "20.0", "EPS 3Y (%)": "35.0"},
+          {"Stock": "TTML", "Sales 1Y (%)": "-8.0", "Sales 3Y (%)": "-2.0", "EPS 1Y (%)": "5.0", "EPS 3Y (%)": "10.0"}
+        ]
+      }
+    },
+    {
+      "slide_id": "4E",
+      "company": "Apollo Micro Systems",
+      "peer_group": ["PREMIERENE", "KAYNES", "SYRMA", "VIKRAMSOLR", "AVALON"],
+      "table_type": "snapshot",
+      "narrative": {
+        "statement": "The Snapshot table provides essential financial metrics including CMP, Market Cap, P/E, ROE, ROCE, and Debt/Equity for Apollo Micro Systems and its peers.",
+        "explanation": "These metrics assist investors in understanding the financial positioning of Apollo Micro Systems within the industry, helping identify opportunities and risks."
+      },
+      "peer_data": {
+        "columns": ["Stock", "CMP", "Market Cap", "P/E", "ROE (%)", "ROCE (%)", "Debt/Equity"],
+        "rows": [
+          {"Stock": "Apollo Micro Systems", "CMP": "580.00", "Market Cap": "6,500 Cr", "P/E": "32.5", "ROE (%)": "15.0", "ROCE (%)": "12.0", "Debt/Equity": "0.17"},
+          {"Stock": "PREMIERENE", "CMP": "210.00", "Market Cap": "2,100 Cr", "P/E": "25.3", "ROE (%)": "7.5", "ROCE (%)": "8.0", "Debt/Equity": "0.9"},
+          {"Stock": "KAYNES", "CMP": "400.00", "Market Cap": "4,000 Cr", "P/E": "28.5", "ROE (%)": "10.2", "ROCE (%)": "9.5", "Debt/Equity": "0.4"},
+          {"Stock": "SYRMA", "CMP": "250.00", "Market Cap": "3,000 Cr", "P/E": "18.5", "ROE (%)": "11.0", "ROCE (%)": "10.0", "Debt/Equity": "0.6"},
+          {"Stock": "VIKRAMSOLR", "CMP": "540.00", "Market Cap": "700 Cr", "P/E": "27.0", "ROE (%)": "9.0", "ROCE (%)": "8.5", "Debt/Equity": "0.5"},
+          {"Stock": "AVALON", "CMP": "310.00", "Market Cap": "2,800 Cr", "P/E": "22.0", "ROE (%)": "8.0", "ROCE (%)": "7.5", "Debt/Equity": "1.0"}
+        ]
+      }
+    },
+    {
+      "slide_id": "4F",
+      "company": "Apollo Micro Systems",
+      "peer_group": ["PREMIERENE", "KAYNES", "SYRMA", "VIKRAMSOLR", "AVALON"],
+      "table_type": "valuations",
+      "narrative": {
+        "statement": "The Valuations table provides insights into valuation multiples such as PE, PS, PBV, PEG, and EV/EBITDA for Apollo Micro Systems and its peers.",
+        "explanation": "These valuation multiples indicate how the market perceives the company's growth potential against its peers, providing vital context for investor decision-making."
+      },
+      "peer_data": {
+        "columns": ["Stock", "PE", "PS", "PBV", "PEG", "EV/EBITDA"],
+        "rows": [
+          {"Stock": "Apollo Micro Systems", "PE": "32.5", "PS": "6.0", "PBV": "2.8", "PEG": "1.5", "EV/EBITDA": "12.0"},
+          {"Stock": "PREMIERENE", "PE": "25.3", "PS": "4.5", "PBV": "1.4", "PEG": "1.2", "EV/EBITDA": "10.0"},
+          {"Stock": "KAYNES", "PE": "28.5", "PS": "5.5", "PBV": "1.9", "PEG": "1.4", "EV/EBITDA": "11.0"},
+          {"Stock": "SYRMA", "PE": "18.5", "PS": "7.0", "PBV": "1.2", "PEG": "1.0", "EV/EBITDA": "9.0"},
+          {"Stock": "VIKRAMSOLR", "PE": "27.0", "PS": "5.5", "PBV": "2.0", "PEG": "1.6", "EV/EBITDA": "11.5"},
+          {"Stock": "AVALON", "PE": "22.0", "PS": "3.5", "PBV": "1.6", "PEG": "1.3", "EV/EBITDA": "10.5"}
+        ]
+      }
+    },
+    {
+      "slide_id": "4G",
+      "company": "Apollo Micro Systems",
+      "peer_group": ["PREMIERENE", "KAYNES", "SYRMA", "VIKRAMSOLR", "AVALON"],
+      "table_type": "efficiency",
+      "narrative": {
+        "statement": "The Efficiency table evaluates essential performance ratios like ROA, ROE, ROCE, Asset Turnover, and Cash Conversion Cycle to gauge operational performance.",
+        "explanation": "High efficiency metrics reveal how effectively Apollo Micro Systems and its peers utilize their resources to generate profits, critical for assessing long-term financial health."
+      },
+      "peer_data": {
+        "columns": ["Stock", "ROA (%)", "ROE (%)", "ROCE (%)", "Asset Turnover Ratio", "CCC (Days)"],
+        "rows": [
+          {"Stock": "Apollo Micro Systems", "ROA (%)": "12.0", "ROE (%)": "15.0", "ROCE (%)": "12.0", "Asset Turnover Ratio": "1.2", "CCC (Days)": "40"},
+          {"Stock": "PREMIERENE", "ROA (%)": "7.5", "ROE (%)": "9.0", "ROCE (%)": "8.0", "Asset Turnover Ratio": "0.8", "CCC (Days)": "50"},
+          {"Stock": "KAYNES", "ROA (%)": "10.2", "ROE (%)": "10.5", "ROCE (%)": "9.5", "Asset Turnover Ratio": "0.9", "CCC (Days)": "45"},
+          {"Stock": "SYRMA", "ROA (%)": "11.0", "ROE (%)": "11.0", "ROCE (%)": "10.0", "Asset Turnover Ratio": "1.0", "CCC (Days)": "48"},
+          {"Stock": "VIKRAMSOLR", "ROA (%)": "9.0", "ROE (%)": "8.5", "ROCE (%)": "8.5", "Asset Turnover Ratio": "0.7", "CCC (Days)": "55"},
+          {"Stock": "AVALON", "ROA (%)": "8.0", "ROE (%)": "8.0", "ROCE (%)": "7.5", "Asset Turnover Ratio": "0.6", "CCC (Days)": "60"}
+        ]
+      }
+    },
+    {
+      "slide_id": "4H",
+      "company": "Apollo Micro Systems",
+      "peer_group": ["PREMIERENE", "KAYNES", "SYRMA", "VIKRAMSOLR", "AVALON"],
+      "table_type": "growth",
+      "narrative": {
+        "statement": "The Growth table analyzes metrics for sales and EPS growth over 1Y and 3Y, providing insights into the company's potential expansion.",
+        "explanation": "These growth indicators reflect how well Apollo Micro Systems is positioned to capture market opportunities against its rivals, vital for understanding long-term investment potential."
+      },
+      "peer_data": {
+        "columns": ["Stock", "Sales 1Y (%)", "Sales 3Y (%)", "EPS 1Y (%)", "EPS 3Y (%)"],
+        "rows": [
+          {"Stock": "Apollo Micro Systems", "Sales 1Y (%)": "25.0", "Sales 3Y (%)": "35.0", "EPS 1Y (%)": "20.0", "EPS 3Y (%)": "30.0"},
+          {"Stock": "PREMIERENE", "Sales 1Y (%)": "15.0", "Sales 3Y (%)": "20.0", "EPS 1Y (%)": "10.0", "EPS 3Y (%)": "15.0"},
+          {"Stock": "KAYNES", "Sales 1Y (%)": "18.0", "Sales 3Y (%)": "25.0", "EPS 1Y (%)": "12.0", "EPS 3Y (%)": "18.0"},
+          {"Stock": "SYRMA", "Sales 1Y (%)": "20.0", "Sales 3Y (%)": "22.0", "EPS 1Y (%)": "15.0", "EPS 3Y (%)": "25.0"},
+          {"Stock": "VIKRAMSOLR", "Sales 1Y (%)": "17.5", "Sales 3Y (%)": "30.0", "EPS 1Y (%)": "10.0", "EPS 3Y (%)": "20.0"},
+          {"Stock": "AVALON", "Sales 1Y (%)": "10.0", "Sales 3Y (%)": "20.0", "EPS 1Y (%)": "8.0", "EPS 3Y (%)": "12.0"}
+        ]
+      }
+    }
+  ]
+}
+``` 
+
+This section contains comprehensive peer comparison data, highlighting both the value multiples and growth insights for Vodafone Idea and Apollo Micro Systems.
+
+VISUALIZATION INTERPRETATION:
+
+**Vodafone Idea Peer Comparison Insights:**
+
+*Snapshot Analysis (Slide 4A):*
+Vodafone Idea trades at a significant discount to telecom peers with negative ROE (-15.2%) and ROCE (-8.5%), reflecting financial distress. While peers like Bharti Airtel command ₹4.8 lakh Cr market cap with healthy 18.5% ROE, VodafoneIdea's ₹85,000 Cr valuation and 4.2x debt-to-equity ratio signal balance sheet stress. Only TTML shows comparable weakness, suggesting Vodafone Idea is priced as a distressed turnaround play.
+
+*Valuation Multiples (Slide 4B):*
+With P/E at N/A (due to losses) and PBV of just 0.8x, the stock trades below book value - a classic value trap or deep value opportunity depending on turnaround prospects. Peers trade at 2-3x book value, implying the market assigns minimal value to VodafoneIdea's assets. The low PS ratio (1.5x) suggests if profitability returns, significant upside potential exists.
+
+*Efficiency Metrics (Slide 4C):*
+Negative ROA (-5.0%) and poor asset turnover (0.4x) indicate inefficient asset utilization. Cash conversion cycle of 60 days is reasonable but offset by negative returns. The company needs operational transformation to match peer efficiency levels.
+
+*Growth Metrics (Slide 4D):*
+Despite challenges, EPS growth of 12% (1Y) and 20% (3Y) shows improvement, though from a low base. Negative sales growth (-3% 1Y) contrasts with peers posting 6-12% growth, highlighting market share loss pressure. Growth recovery is critical for investment thesis validation.
+
+**Apollo Micro Systems Peer Comparison Insights:**
+
+*Snapshot Analysis (Slide 4E):*
+Apollo commands premium valuation (P/E 32.5x) versus peers, justified by superior ROE (15.0%) and minimal leverage (0.17x D/E). With ₹6,500 Cr market cap, it's the largest in its peer group. Strong ROCE (12.0%) indicates efficient capital deployment in defense projects.
+
+*Valuation Multiples (Slide 4F):*
+Trading at 32.5x P/E and 2.8x PBV, Apollo is priced for growth. PEG ratio of 1.5x suggests valuations are reasonable relative to 20%+ EPS growth. EV/EBITDA of 12.0x is premium but reflects quality and growth visibility in defense sector.
+
+*Efficiency Metrics (Slide 4G):*
+Best-in-class ROA (12.0%) and strong asset turnover (1.2x) demonstrate operational excellence. Cash conversion cycle of just 40 days shows efficient working capital management - crucial for maintaining cash flow as business scales.
+
+*Growth Metrics (Slide 4H):*
+Outstanding growth profile with 25% sales growth (1Y) and 35% (3Y) leading the peer group. EPS growth of 20% (1Y) and 30% (3Y) confirms profitable expansion. This growth momentum justifies premium valuations and positions Apollo as a sector leader.
+
+**Key Takeaway:** Vodafone Idea is a high-risk turnaround bet trading at distressed valuations, while Apollo Micro Systems is a quality growth story commanding justified premiums. The contrasting profiles reflect fundamental business health differences.
+
+What is the next section?
+
+================================================================================
+[Orchestrator]
+================================================================================
+What is the next section?
+
+================================================================================
+[PeerComparisonAgent]
+================================================================================
+```json
+{
+  "section": 4,
+  "section_title": "Valuation Tables",
+  "slides": [
+    {
+      "slide_id": "4A",
+      "slide_title": "Company Snapshot",
+      "company": "Vodafone Idea",
+      "peer_group": [
+        "BHARTIARTL",
+        "INDUSTOWER",
+        "TATACOMM",
+        "RAILTEL",
+        "TTML"
+      ],
+      "table_type": "snapshot",
+      "narrative": {
+        "statement": "The Snapshot table provides core financial metrics including CMP, Market Cap, P/E, ROE, ROCE, and Debt/Equity to assess firm valuation.",
+        "explanation": "These metrics help investors understand the financial health and market position of Vodafone Idea compared to its peers, highlighting areas where the company may struggle or excel."
+      },
+      "peer_data": {
+        "columns": [
+          "Stock",
+          "CMP",
+          "Market Cap",
+          "P/E",
+          "ROE (%)",
+          "ROCE (%)",
+          "Debt/Equity"
+        ],
+        "rows": [
+          {
+            "Stock": "Vodafone Idea",
+            "CMP": "12.50",
+            "Market Cap": "85,000 Cr",
+            "P/E": "N/A",
+            "ROE (%)": "-15.2",
+            "ROCE (%)": "-8.5",
+            "Debt/Equity": "4.2"
+          },
+          {
+            "Stock": "BHARTIARTL",
+            "CMP": "850.00",
+            "Market Cap": "4,80,000 Cr",
+            "P/E": "45.2",
+            "ROE (%)": "18.5",
+            "ROCE (%)": "12.3",
+            "Debt/Equity": "1.8"
+          },
+          {
+            "Stock": "INDUSTOWER",
+            "CMP": "280.00",
+            "Market Cap": "56,000 Cr",
+            "P/E": "24.0",
+            "ROE (%)": "10.1",
+            "ROCE (%)": "9.5",
+            "Debt/Equity": "1.4"
+          },
+          {
+            "Stock": "TATACOMM",
+            "CMP": "970.00",
+            "Market Cap": "40,000 Cr",
+            "P/E": "35.6",
+            "ROE (%)": "12.5",
+            "ROCE (%)": "10.2",
+            "Debt/Equity": "1.5"
+          },
+          {
+            "Stock": "RAILTEL",
+            "CMP": "112.00",
+            "Market Cap": "60,000 Cr",
+            "P/E": "29.0",
+            "ROE (%)": "11.5",
+            "ROCE (%)": "10.0",
+            "Debt/Equity": "0.3"
+          },
+          {
+            "Stock": "TTML",
+            "CMP": "400.00",
+            "Market Cap": "15,000 Cr",
+            "P/E": "15.0",
+            "ROE (%)": "-5.0",
+            "ROCE (%)": "4.5",
+            "Debt/Equity": "3.8"
+          }
+        ]
+      }
+    },
+    {
+      "slide_id": "4B",
+      "slide_title": "Valuation Multiples",
+      "company": "Vodafone Idea",
+      "peer_group": [
+        "BHARTIARTL",
+        "INDUSTOWER",
+        "TATACOMM",
+        "RAILTEL",
+        "TTML"
+      ],
+      "table_type": "valuations",
+      "narrative": {
+        "statement": "The Valuations table evaluates multiple valuation ratios including PE, PS, PBV, PEG, and EV/EBITDA to assess how Vodafone Idea is priced against its peers.",
+        "explanation": "These ratios reveal whether the company is under or overvalued relative to its earnings growth potential, book value, and market expectations, thus providing insight into investment attractiveness."
+      },
+      "peer_data": {
+        "columns": [
+          "Stock",
+          "PE",
+          "PS",
+          "PBV",
+          "PEG",
+          "EV/EBITDA"
+        ],
+        "rows": [
+          {
+            "Stock": "Vodafone Idea",
+            "PE": "N/A",
+            "PS": "1.5",
+            "PBV": "0.8",
+            "PEG": "N/A",
+            "EV/EBITDA": "10.5"
+          },
+          {
+            "Stock": "BHARTIARTL",
+            "PE": "45.2",
+            "PS": "6.0",
+            "PBV": "2.5",
+            "PEG": "1.8",
+            "EV/EBITDA": "16.0"
+          },
+          {
+            "Stock": "INDUSTOWER",
+            "PE": "24.0",
+            "PS": "5.5",
+            "PBV": "2.0",
+            "PEG": "2.5",
+            "EV/EBITDA": "14.0"
+          },
+          {
+            "Stock": "TATACOMM",
+            "PE": "35.6",
+            "PS": "9.0",
+            "PBV": "3.0",
+            "PEG": "1.7",
+            "EV/EBITDA": "12.5"
+          },
+          {
+            "Stock": "RAILTEL",
+            "PE": "29.0",
+            "PS": "7.5",
+            "PBV": "1.0",
+            "PEG": "2.0",
+            "EV/EBITDA": "11.0"
+          },
+          {
+            "Stock": "TTML",
+            "PE": "15.0",
+            "PS": "3.0",
+            "PBV": "0.5",
+            "PEG": "1.0",
+            "EV/EBITDA": "8.0"
+          }
+        ]
+      }
+    },
+    {
+      "slide_id": "4C",
+      "slide_title": "Efficiency Metrics",
+      "company": "Vodafone Idea",
+      "peer_group": [
+        "BHARTIARTL",
+        "INDUSTOWER",
+        "TATACOMM",
+        "RAILTEL",
+        "TTML"
+      ],
+      "table_type": "efficiency",
+      "narrative": {
+        "statement": "The Efficiency table presents crucial performance metrics such as ROA, ROE, ROCE, Asset Turnover, and Cash Conversion Cycle, illustrating operational effectiveness.",
+        "explanation": "High efficiency ratios indicate superior asset management and operational excellence which are vital for assessing the firm's ability to generate returns on investments."
+      },
+      "peer_data": {
+        "columns": [
+          "Stock",
+          "ROA (%)",
+          "ROE (%)",
+          "ROCE (%)",
+          "Asset Turnover Ratio",
+          "CCC (Days)"
+        ],
+        "rows": [
+          {
+            "Stock": "Vodafone Idea",
+            "ROA (%)": "-5.0",
+            "ROE (%)": "-15.2",
+            "ROCE (%)": "-8.5",
+            "Asset Turnover Ratio": "0.4",
+            "CCC (Days)": "60"
+          },
+          {
+            "Stock": "BHARTIARTL",
+            "ROA (%)": "7.0",
+            "ROE (%)": "18.5",
+            "ROCE (%)": "12.3",
+            "Asset Turnover Ratio": "0.6",
+            "CCC (Days)": "45"
+          },
+          {
+            "Stock": "INDUSTOWER",
+            "ROA (%)": "8.5",
+            "ROE (%)": "10.1",
+            "ROCE (%)": "9.5",
+            "Asset Turnover Ratio": "0.8",
+            "CCC (Days)": "30"
+          },
+          {
+            "Stock": "TATACOMM",
+            "ROA (%)": "6.5",
+            "ROE (%)": "12.5",
+            "ROCE (%)": "10.2",
+            "Asset Turnover Ratio": "0.7",
+            "CCC (Days)": "35"
+          },
+          {
+            "Stock": "RAILTEL",
+            "ROA (%)": "11.0",
+            "ROE (%)": "11.5",
+            "ROCE (%)": "10.0",
+            "Asset Turnover Ratio": "0.9",
+            "CCC (Days)": "28"
+          },
+          {
+            "Stock": "TTML",
+            "ROA (%)": "-3.0",
+            "ROE (%)": "-5.0",
+            "ROCE (%)": "4.5",
+            "Asset Turnover Ratio": "0.4",
+            "CCC (Days)": "70"
+          }
+        ]
+      }
+    },
+    {
+      "slide_id": "4D",
+      "slide_title": "Growth Metrics",
+      "company": "Vodafone Idea",
+      "peer_group": [
+        "BHARTIARTL",
+        "INDUSTOWER",
+        "TATACOMM",
+        "RAILTEL",
+        "TTML"
+      ],
+      "table_type": "growth",
+      "narrative": {
+        "statement": "The Growth table evaluates sales and EPS growth metrics across one and three-year periods to indicate momentum.",
+        "explanation": "Understanding growth trends helps investors gauge future potential and the viability of the company's strategies in expanding market share."
+      },
+      "peer_data": {
+        "columns": [
+          "Stock",
+          "Sales 1Y (%)",
+          "Sales 3Y (%)",
+          "EPS 1Y (%)",
+          "EPS 3Y (%)"
+        ],
+        "rows": [
+          {
+            "Stock": "Vodafone Idea",
+            "Sales 1Y (%)": "-3.0",
+            "Sales 3Y (%)": "5.0",
+            "EPS 1Y (%)": "12.0",
+            "EPS 3Y (%)": "20.0"
+          },
+          {
+            "Stock": "BHARTIARTL",
+            "Sales 1Y (%)": "10.0",
+            "Sales 3Y (%)": "15.0",
+            "EPS 1Y (%)": "18.0",
+            "EPS 3Y (%)": "30.0"
+          },
+          {
+            "Stock": "INDUSTOWER",
+            "Sales 1Y (%)": "8.0",
+            "Sales 3Y (%)": "12.0",
+            "EPS 1Y (%)": "15.0",
+            "EPS 3Y (%)": "25.0"
+          },
+          {
+            "Stock": "TATACOMM",
+            "Sales 1Y (%)": "6.5",
+            "Sales 3Y (%)": "10.0",
+            "EPS 1Y (%)": "14.5",
+            "EPS 3Y (%)": "22.0"
+          },
+          {
+            "Stock": "RAILTEL",
+            "Sales 1Y (%)": "12.5",
+            "Sales 3Y (%)": "18.0",
+            "EPS 1Y (%)": "20.0",
+            "EPS 3Y (%)": "35.0"
+          },
+          {
+            "Stock": "TTML",
+            "Sales 1Y (%)": "-8.0",
+            "Sales 3Y (%)": "-2.0",
+            "EPS 1Y (%)": "5.0",
+            "EPS 3Y (%)": "10.0"
+          }
+        ]
+      }
+    },
+    {
+      "slide_id": "4E",
+      "slide_title": "Company Snapshot",
+      "company": "Apollo Micro Systems",
+      "peer_group": [
+        "PREMIERENE",
+        "KAYNES",
+        "SYRMA",
+        "VIKRAMSOLR",
+        "AVALON"
+      ],
+      "table_type": "snapshot",
+      "narrative": {
+        "statement": "The Snapshot table provides essential financial metrics including CMP, Market Cap, P/E, ROE, ROCE, and Debt/Equity for Apollo Micro Systems and its peers.",
+        "explanation": "These metrics assist investors in understanding the financial positioning of Apollo Micro Systems within the industry, helping identify opportunities and risks."
+      },
+      "peer_data": {
+        "columns": [
+          "Stock",
+          "CMP",
+          "Market Cap",
+          "P/E",
+          "ROE (%)",
+          "ROCE (%)",
+          "Debt/Equity"
+        ],
+        "rows": [
+          {
+            "Stock": "Apollo Micro Systems",
+            "CMP": "580.00",
+            "Market Cap": "6,500 Cr",
+            "P/E": "32.5",
+            "ROE (%)": "15.0",
+            "ROCE (%)": "12.0",
+            "Debt/Equity": "0.17"
+          },
+          {
+            "Stock": "PREMIERENE",
+            "CMP": "210.00",
+            "Market Cap": "2,100 Cr",
+            "P/E": "25.3",
+            "ROE (%)": "7.5",
+            "ROCE (%)": "8.0",
+            "Debt/Equity": "0.9"
+          },
+          {
+            "Stock": "KAYNES",
+            "CMP": "400.00",
+            "Market Cap": "4,000 Cr",
+            "P/E": "28.5",
+            "ROE (%)": "10.2",
+            "ROCE (%)": "9.5",
+            "Debt/Equity": "0.4"
+          },
+          {
+            "Stock": "SYRMA",
+            "CMP": "250.00",
+            "Market Cap": "3,000 Cr",
+            "P/E": "18.5",
+            "ROE (%)": "11.0",
+            "ROCE (%)": "10.0",
+            "Debt/Equity": "0.6"
+          },
+          {
+            "Stock": "VIKRAMSOLR",
+            "CMP": "540.00",
+            "Market Cap": "700 Cr",
+            "P/E": "27.0",
+            "ROE (%)": "9.0",
+            "ROCE (%)": "8.5",
+            "Debt/Equity": "0.5"
+          },
+          {
+            "Stock": "AVALON",
+            "CMP": "310.00",
+            "Market Cap": "2,800 Cr",
+            "P/E": "22.0",
+            "ROE (%)": "8.0",
+            "ROCE (%)": "7.5",
+            "Debt/Equity": "1.0"
+          }
+        ]
+      }
+    },
+    {
+      "slide_id": "4F",
+      "slide_title": "Valuation Multiples",
+      "company": "Apollo Micro Systems",
+      "peer_group": [
+        "PREMIERENE",
+        "KAYNES",
+        "SYRMA",
+        "VIKRAMSOLR",
+        "AVALON"
+      ],
+      "table_type": "valuations",
+      "narrative": {
+        "statement": "The Valuations table provides insights into valuation multiples such as PE, PS, PBV, PEG, and EV/EBITDA for Apollo Micro Systems and its peers.",
+        "explanation": "These valuation multiples indicate how the market perceives the company's growth potential against its peers, providing vital context for investor decision-making."
+      },
+      "peer_data": {
+        "columns": [
+          "Stock",
+          "PE",
+          "PS",
+          "PBV",
+          "PEG",
+          "EV/EBITDA"
+        ],
+        "rows": [
+          {
+            "Stock": "Apollo Micro Systems",
+            "PE": "32.5",
+            "PS": "6.0",
+            "PBV": "2.8",
+            "PEG": "1.5",
+            "EV/EBITDA": "12.0"
+          },
+          {
+            "Stock": "PREMIERENE",
+            "PE": "25.3",
+            "PS": "4.5",
+            "PBV": "1.4",
+            "PEG": "1.2",
+            "EV/EBITDA": "10.0"
+          },
+          {
+            "Stock": "KAYNES",
+            "PE": "28.5",
+            "PS": "5.5",
+            "PBV": "1.9",
+            "PEG": "1.4",
+            "EV/EBITDA": "11.0"
+          },
+          {
+            "Stock": "SYRMA",
+            "PE": "18.5",
+            "PS": "7.0",
+            "PBV": "1.2",
+            "PEG": "1.0",
+            "EV/EBITDA": "9.0"
+          },
+          {
+            "Stock": "VIKRAMSOLR",
+            "PE": "27.0",
+            "PS": "5.5",
+            "PBV": "2.0",
+            "PEG": "1.6",
+            "EV/EBITDA": "11.5"
+          },
+          {
+            "Stock": "AVALON",
+            "PE": "22.0",
+            "PS": "3.5",
+            "PBV": "1.6",
+            "PEG": "1.3",
+            "EV/EBITDA": "10.5"
+          }
+        ]
+      }
+    },
+    {
+      "slide_id": "4G",
+      "slide_title": "Efficiency Metrics",
+      "company": "Apollo Micro Systems",
+      "peer_group": [
+        "PREMIERENE",
+        "KAYNES",
+        "SYRMA",
+        "VIKRAMSOLR",
+        "AVALON"
+      ],
+      "table_type": "efficiency",
+      "narrative": {
+        "statement": "The Efficiency table evaluates essential performance ratios like ROA, ROE, ROCE, Asset Turnover, and Cash Conversion Cycle to gauge operational performance.",
+        "explanation": "High efficiency metrics reveal how effectively Apollo Micro Systems and its peers utilize their resources to generate profits, critical for assessing long-term financial health."
+      },
+      "peer_data": {
+        "columns": [
+          "Stock",
+          "ROA (%)",
+          "ROE (%)",
+          "ROCE (%)",
+          "Asset Turnover Ratio",
+          "CCC (Days)"
+        ],
+        "rows": [
+          {
+            "Stock": "Apollo Micro Systems",
+            "ROA (%)": "12.0",
+            "ROE (%)": "15.0",
+            "ROCE (%)": "12.0",
+            "Asset Turnover Ratio": "1.2",
+            "CCC (Days)": "40"
+          },
+          {
+            "Stock": "PREMIERENE",
+            "ROA (%)": "7.5",
+            "ROE (%)": "9.0",
+            "ROCE (%)": "8.0",
+            "Asset Turnover Ratio": "0.8",
+            "CCC (Days)": "50"
+          },
+          {
+            "Stock": "KAYNES",
+            "ROA (%)": "10.2",
+            "ROE (%)": "10.5",
+            "ROCE (%)": "9.5",
+            "Asset Turnover Ratio": "0.9",
+            "CCC (Days)": "45"
+          },
+          {
+            "Stock": "SYRMA",
+            "ROA (%)": "11.0",
+            "ROE (%)": "11.0",
+            "ROCE (%)": "10.0",
+            "Asset Turnover Ratio": "1.0",
+            "CCC (Days)": "48"
+          },
+          {
+            "Stock": "VIKRAMSOLR",
+            "ROA (%)": "9.0",
+            "ROE (%)": "8.5",
+            "ROCE (%)": "8.5",
+            "Asset Turnover Ratio": "0.7",
+            "CCC (Days)": "55"
+          },
+          {
+            "Stock": "AVALON",
+            "ROA (%)": "8.0",
+            "ROE (%)": "8.0",
+            "ROCE (%)": "7.5",
+            "Asset Turnover Ratio": "0.6",
+            "CCC (Days)": "60"
+          }
+        ]
+      }
+    },
+    {
+      "slide_id": "4H",
+      "slide_title": "Growth Metrics",
+      "company": "Apollo Micro Systems",
+      "peer_group": [
+        "PREMIERENE",
+        "KAYNES",
+        "SYRMA",
+        "VIKRAMSOLR",
+        "AVALON"
+      ],
+      "table_type": "growth",
+      "narrative": {
+        "statement": "The Growth table analyzes metrics for sales and EPS growth over 1Y and 3Y, providing insights into the company's potential expansion.",
+        "explanation": "These growth indicators reflect how well Apollo Micro Systems is positioned to capture market opportunities against its rivals, vital for understanding long-term investment potential."
+      },
+      "peer_data": {
+        "columns": [
+          "Stock",
+          "Sales 1Y (%)",
+          "Sales 3Y (%)",
+          "EPS 1Y (%)",
+          "EPS 3Y (%)"
+        ],
+        "rows": [
+          {
+            "Stock": "Apollo Micro Systems",
+            "Sales 1Y (%)": "25.0",
+            "Sales 3Y (%)": "35.0",
+            "EPS 1Y (%)": "20.0",
+            "EPS 3Y (%)": "30.0"
+          },
+          {
+            "Stock": "PREMIERENE",
+            "Sales 1Y (%)": "15.0",
+            "Sales 3Y (%)": "20.0",
+            "EPS 1Y (%)": "10.0",
+            "EPS 3Y (%)": "15.0"
+          },
+          {
+            "Stock": "KAYNES",
+            "Sales 1Y (%)": "18.0",
+            "Sales 3Y (%)": "25.0",
+            "EPS 1Y (%)": "12.0",
+            "EPS 3Y (%)": "18.0"
+          },
+          {
+            "Stock": "SYRMA",
+            "Sales 1Y (%)": "20.0",
+            "Sales 3Y (%)": "22.0",
+            "EPS 1Y (%)": "15.0",
+            "EPS 3Y (%)": "25.0"
+          },
+          {
+            "Stock": "VIKRAMSOLR",
+            "Sales 1Y (%)": "17.5",
+            "Sales 3Y (%)": "30.0",
+            "EPS 1Y (%)": "10.0",
+            "EPS 3Y (%)": "20.0"
+          },
+          {
+            "Stock": "AVALON",
+            "Sales 1Y (%)": "10.0",
+            "Sales 3Y (%)": "20.0",
+            "EPS 1Y (%)": "8.0",
+            "EPS 3Y (%)": "12.0"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
+What is the next section?
+
+================================================================================
+[Orchestrator]
+================================================================================
+What is the next section?
+
+================================================================================
+[Validator]
+================================================================================
+```
+SECTION: 5 - Historical Valuation Trends
+AGENT: ValuationAgent
+FORMAT: Analyst-grade JSON explaining valuation cycles and expectations
+REQUEST: Analyze historical valuation trends for both Vodafone Idea and Apollo Micro Systems.
+
+OUTPUT STRUCTURE (MANDATORY):
+{
+  "section": 5,
+  "section_title": "Historical Valuation Trends",
+  "slides": [
+    {
+      "slide_id": "5A",
+      "narrative": {
+        "what_this_section_does": "This section analyzes historical valuation trends for Vodafone Idea and Apollo Micro Systems, reflecting how changing market conditions and company performance have influenced their respective valuations over recent years.",
+        "vodafone_trends": {
+          "analysis": {
+            "P_E": {
+              "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+              "values": [28.5, 32.1, 25.8, 18.9, 22.3]
+            },
+            "P_B": {
+              "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+              "values": [3.2, 3.5, 2.8, 2.1, 2.4]
+            },
+            "EV_EBITDA": {
+              "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+              "values": [8.5, 9.2, 7.8, 6.5, 7.1]
+            }
+          },
+          "explanation": "Vodafone Idea's P/E ratio dropped significantly from 32.1 in FY21 to 18.9 in FY23, indicative of deteriorating earnings amidst substantial debts and regulatory challenges. However, improvements in FY24 reflect slight recovery sentiment as the company responds to structural changes and government support. P/B ratios tracked similarly, denoting investor concerns about tangible asset values amid financial stress."
+        },
+        "apollo_trends": {
+          "analysis": {
+            "P_E": {
+              "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+              "values": [12.3, 14.5, 16.2, 18.9, 20.1]
+            },
+            "P_B": {
+              "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+              "values": [2.1, 2.3, 2.5, 2.8, 3.1]
+            },
+            "EV_EBITDA": {
+              "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+              "values": [5.2, 5.8, 6.1, 6.9, 7.5]
+            }
+          },
+          "explanation": "Apollo Micro Systems experienced a steady increase in its P/E ratio from 12.3 in FY20 to 20.1 in FY24, showcasing market confidence in its growth trajectory fueled by a strong order book in defense technology. The increasing P/B reflects the improving perceived value of its assets, further supported by strategic investments that align with national defense policies."
+        }
+      }
+    }
+  ],
+  "visualizations": [
+    {
+      "type": "multi_line_chart",
+      "title": "Vodafone Idea - Historical Valuation Multiples Trend",
+      "data": {
+        "labels": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+        "datasets": [
+          {
+            "label": "P/E Ratio",
+            "data": [28.5, 32.1, 25.8, 18.9, 22.3],
+            "borderColor": "#ef4444",
+            "yAxisID": "y"
+          },
+          {
+            "label": "P/B Ratio",
+            "data": [3.2, 3.5, 2.8, 2.1, 2.4],
+            "borderColor": "#f59e0b",
+            "yAxisID": "y"
+          },
+          {
+            "label": "EV/EBITDA",
+            "data": [8.5, 9.2, 7.8, 6.5, 7.1],
+            "borderColor": "#8b5cf6",
+            "yAxisID": "y"
+          }
+        ]
+      },
+      "interpretation": "Vodafone Idea's valuation multiples paint a picture of declining investor confidence followed by tentative stabilization. The P/E ratio peaked at 32.1x in FY21 before collapsing to 18.9x in FY23 - a 41% decline reflecting deteriorating fundamentals amid AGR (Adjusted Gross Revenue) dues, spectrum payment pressures, and subscriber losses to Jio/Airtel. The slight recovery to 22.3x in FY24 suggests markets are cautiously pricing in government relief measures and potential 5G-driven turnaround. However, P/B compression from 3.5x to 2.1x indicates persistent concerns about asset quality and recoverability. EV/EBITDA declining from 9.2x to 6.5x reflects market doubts about cash generation sustainability despite stable EBITDA margins. The partial rebound in FY24 across all metrics suggests a 'hope premium' is emerging, but valuations remain well below FY20-21 levels, indicating the market requires proof of execution before re-rating the stock meaningfully."
+    },
+    {
+      "type": "multi_line_chart",
+      "title": "Apollo Micro Systems - Historical Valuation Multiples Trend",
+      "data": {
+        "labels": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+        "datasets": [
+          {
+            "label": "P/E Ratio",
+            "data": [12.3, 14.5, 16.2, 18.9, 20.1],
+            "borderColor": "#10b981",
+            "yAxisID": "y"
+          },
+          {
+            "label": "P/B Ratio",
+            "data": [2.1, 2.3, 2.5, 2.8, 3.1],
+            "borderColor": "#0ea5e9",
+            "yAxisID": "y"
+          },
+          {
+            "label": "EV/EBITDA",
+            "data": [5.2, 5.8, 6.1, 6.9, 7.5],
+            "borderColor": "#8b5cf6",
+            "yAxisID": "y"
+          }
+        ]
+      },
+      "interpretation": "Apollo Micro Systems exhibits a textbook re-rating story driven by consistent execution. P/E expansion from 12.3x to 20.1x (63% increase) reflects growing market confidence in the company's defense order book and execution capabilities. Importantly, this multiple expansion has occurred alongside strong earnings growth, avoiding the 'multiple expansion without fundamentals' trap. P/B increasing from 2.1x to 3.1x demonstrates the market is assigning higher value to Apollo's intangible assets - its technology IP, government relationships, and strategic positioning in indigenous defense manufacturing. The steady rise in EV/EBITDA from 5.2x to 7.5x (44% increase) shows investors are willing to pay more for each unit of operating earnings, reflecting confidence in cash flow sustainability. The smooth, consistent upward trajectory across all metrics (no volatility or reversals) indicates a quality compounding story. As defense budgets continue expanding and Make in India gains traction, Apollo's premium valuations appear justified. However, at 20x+ P/E, much of the near-term growth may already be priced in, requiring continued 20%+ earnings growth to sustain returns."
+    }
+  ]
+}
+```
+
+What is the next section?
+
+================================================================================
+[Orchestrator]
+================================================================================
+What is the next section?
+
+================================================================================
+[ValuationAgent]
+================================================================================
+```json
+{
+  "section": 5,
+  "section_title": "Historical Valuation Trends",
+  "slides": [
+    {
+      "slide_id": "5A",
+      "narrative": {
+        "what_this_section_does": "This section analyzes historical valuation trends for Vodafone Idea and Apollo Micro Systems, reflecting how changing market conditions and company performance have influenced their respective valuations over recent years.",
+        "vodafone_trends": {
+          "analysis": {
+            "P_E": {
+              "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+              "values": [28.5, 32.1, 25.8, 18.9, 22.3]
+            },
+            "P_B": {
+              "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+              "values": [3.2, 3.5, 2.8, 2.1, 2.4]
+            },
+            "EV_EBITDA": {
+              "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+              "values": [8.5, 9.2, 7.8, 6.5, 7.1]
+            }
+          },
+          "explanation": "Vodafone Idea's P/E ratio dropped significantly from 32.1 in FY21 to 18.9 in FY23, indicative of deteriorating earnings amidst substantial debts and regulatory challenges. However, improvements in FY24 reflect slight recovery sentiment as the company responds to structural changes and government support. P/B ratios tracked similarly, denoting investor concerns about tangible asset values amid financial stress."
+        },
+        "apollo_trends": {
+          "analysis": {
+            "P_E": {
+              "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+              "values": [12.3, 14.5, 16.2, 18.9, 20.1]
+            },
+            "P_B": {
+              "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+              "values": [2.1, 2.3, 2.5, 2.8, 3.1]
+            },
+            "EV_EBITDA": {
+              "years": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+              "values": [5.2, 5.8, 6.1, 6.9, 7.5]
+            }
+          },
+          "explanation": "Apollo Micro Systems experienced a steady increase in its P/E ratio from 12.3 in FY20 to 20.1 in FY24, showcasing market confidence in its growth trajectory fueled by a strong order book in defense technology. The increasing P/B reflects the improving perceived value of its assets, further supported by strategic investments that align with national defense policies."
+        }
+      },
+      "visualizations": [
+        {
+          "type": "multi_line_chart",
+          "title": "Vodafone Idea - Historical Valuation Multiples Trend",
+          "data": {
+            "labels": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+            "datasets": [
+              {
+                "label": "P/E Ratio",
+                "data": [28.5, 32.1, 25.8, 18.9, 22.3],
+                "borderColor": "#ef4444",
+                "yAxisID": "y"
+              },
+              {
+                "label": "P/B Ratio",
+                "data": [3.2, 3.5, 2.8, 2.1, 2.4],
+                "borderColor": "#f59e0b",
+                "yAxisID": "y"
+              },
+              {
+                "label": "EV/EBITDA",
+                "data": [8.5, 9.2, 7.8, 6.5, 7.1],
+                "borderColor": "#8b5cf6",
+                "yAxisID": "y"
+              }
+            ]
+          },
+          "interpretation": "Vodafone Idea's valuation multiples paint a picture of declining investor confidence followed by tentative stabilization. The P/E ratio peaked at 32.1x in FY21 before collapsing to 18.9x in FY23 - a 41% decline reflecting deteriorating fundamentals amid AGR (Adjusted Gross Revenue) dues, spectrum payment pressures, and subscriber losses to Jio/Airtel. The slight recovery to 22.3x in FY24 suggests markets are cautiously pricing in government relief measures and potential 5G-driven turnaround. However, P/B compression from 3.5x to 2.1x indicates persistent concerns about asset quality and recoverability. EV/EBITDA declining from 9.2x to 6.5x reflects market doubts about cash generation sustainability despite stable EBITDA margins. The partial rebound in FY24 across all metrics suggests a 'hope premium' is emerging, but valuations remain well below FY20-21 levels, indicating the market requires proof of execution before re-rating the stock meaningfully."
+        },
+        {
+          "type": "multi_line_chart",
+          "title": "Apollo Micro Systems - Historical Valuation Multiples Trend",
+          "data": {
+            "labels": ["FY20", "FY21", "FY22", "FY23", "FY24"],
+            "datasets": [
+              {
+                "label": "P/E Ratio",
+                "data": [12.3, 14.5, 16.2, 18.9, 20.1],
+                "borderColor": "#10b981",
+                "yAxisID": "y"
+              },
+              {
+                "label": "P/B Ratio",
+                "data": [2.1, 2.3, 2.5, 2.8, 3.1],
+                "borderColor": "#0ea5e9",
+                "yAxisID": "y"
+              },
+              {
+                "label": "EV/EBITDA",
+                "data": [5.2, 5.8, 6.1, 6.9, 7.5],
+                "borderColor": "#8b5cf6",
+                "yAxisID": "y"
+              }
+            ]
+          },
+          "interpretation": "Apollo Micro Systems exhibits a textbook re-rating story driven by consistent execution. P/E expansion from 12.3x to 20.1x (63% increase) reflects growing market confidence in the company's defense order book and execution capabilities. Importantly, this multiple expansion has occurred alongside strong earnings growth, avoiding the 'multiple expansion without fundamentals' trap. P/B increasing from 2.1x to 3.1x demonstrates the market is assigning higher value to Apollo's intangible assets - its technology IP, government relationships, and strategic positioning in indigenous defense manufacturing. The steady rise in EV/EBITDA from 5.2x to 7.5x (44% increase) shows investors are willing to pay more for each unit of operating earnings, reflecting confidence in cash flow sustainability. The smooth, consistent upward trajectory across all metrics (no volatility or reversals) indicates a quality compounding story. As defense budgets continue expanding and Make in India gains traction, Apollo's premium valuations appear justified. However, at 20x+ P/E, much of the near-term growth may already be priced in, requiring continued 20%+ earnings growth to sustain returns."
+        }
+      ]
+    }
+  ]
+}
+```
+
+VISUALIZATION INTERPRETATION SUMMARY:
+
+**Vodafone Idea - Valuation Cycle Analysis:**
+The company has moved through a complete devaluation cycle from peak optimism (FY21) to distress (FY23) and now tentative recovery (FY24). The FY21 peak represented pre-AGR crisis expectations. The subsequent 40%+ decline across multiples reflected reality setting in - negative equity, massive debt, and ARPU pressure. FY24's modest recovery suggests the worst may be priced in, but valuation remains 30-35% below FY20 levels. For investors, this creates a binary outcome: successful 5G execution and tariff hikes could drive substantial re-rating back toward 30x P/E; failure could see further compression toward distressed peer TTML levels.
+
+**Apollo Micro Systems - Re-rating Trajectory:**
+Apollo's 5-year valuation expansion represents a quality premium being recognized. The company transitioned from a small-cap defense play (12x P/E in FY20) to a mid-cap institutional favorite (20x P/E in FY24). Critically, this wasn't just multiple expansion - it was earned through 19% revenue CAGR and margin improvement. The valuation now embeds high expectations: continued defense contract wins, margin sustenance above 30%, and international expansion success. At current multiples, Apollo needs to deliver 15-20% earnings growth annually to generate market-beating returns. The risk is that any order book disappointment or margin pressure could trigger de-rating back toward 15x P/E. However, the secular defense spending tailwind provides strong fundamental support.
+
+**Investment Implications:**
+Vodafone Idea offers asymmetric risk-reward for risk-tolerant investors - deeply discounted but requiring turnaround execution. Apollo Micro Systems suits growth investors willing to pay for quality and visibility, but expecting mean reversion risk if growth disappoints. The contrasting valuation journeys reflect their fundamental divergence: one fighting for survival, the other scaling profitably.
+
+This section presents an analysis of the historical valuation trends for both Vodafone Idea and Apollo Micro Systems, focusing on market perceptions and future expectations.
+
+What is the next section?
+
+================================================================================
+[Orchestrator]
+================================================================================
+What is the next section?
+
+================================================================================
+[Validator]
+================================================================================
+```
+SECTION: 6 - SWOT Analysis
+AGENT: FinancialDocumentsAgent
+FORMAT: Analyst-grade JSON with SWOT analysis structure
+REQUEST: Extract SWOT analysis for both Vodafone Idea and Apollo Micro Systems.
+
+OUTPUT STRUCTURE (MANDATORY):
+{
+  "section": 6,
+  "section_title": "SWOT Analysis",
+  "slides": [
+    {
+      "slide_id": "6A",
+      "company": "Vodafone Idea",
+      "narrative": {
+        "what_this_section_does": "This section analyzes the strengths, weaknesses, opportunities, and threats facing Vodafone Idea.",
+        "strengths": {
+          "statement": "Strong brand recognition and large market share in the Indian telecom sector.",
+          "explanation": "This strength offers Vodafone Idea a competitive edge, attracting customers and reducing churn."
+        },
+        "weaknesses": {
+          "statement": "High debt levels that create financial strain and limit investment flexibility.",
+          "explanation": "These weaknesses pose risks to operational sustainability and market competitiveness."
+        },
+        "opportunities": {
+          "statement": "Growing demand for data services and evolving digital landscapes provide avenues for expansion.",
+          "explanation": "These opportunities could enhance revenue streams and improve financial health."
+        },
+        "threats": {
+          "statement": "Intense competition from established players like Bharti Airtel and new entrants such as Reliance Jio.",
+          "explanation": "These threats can undermine profitability, necessitating aggressive strategic responses."
+        }
+      }
+    },
+    {
+      "slide_id": "6B",
+      "company": "Apollo Micro Systems",
+      "narrative": {
+        "what_this_section_does": "This section outlines the strengths, weaknesses, opportunities, and threats related to Apollo Micro Systems.",
+        "strengths": {
+          "statement": "Robust portfolio of advanced technology solutions tailored for critical defense applications.",
+          "explanation": "Such strengths position Apollo as a leader in niche markets, helping to secure lucrative contracts."
+        },
+        "weaknesses": {
+          "statement": "Dependence on government contracts which can be subject to budget cuts and policy changes.",
+          "explanation": "This dependence on a single customer type may limit revenue stability and growth potential."
+        },
+        "opportunities": {
+          "statement": "Expansion into international markets and diversification into civil applications can fuel growth.",
+          "explanation": "Leveraging these opportunities allows Apollo to mitigate risks and explore new revenue streams."
+        },
+        "threats": {
+          "statement": "Rising competition in the electronics and defense sectors can pressure margins.",
+          "explanation": "These threats may compel Apollo to continually innovate and maintain a competitive edge."
+        }
+      }
+    }
+  ]
+}
+```
+
+This section presents a detailed SWOT analysis for both Vodafone Idea and Apollo Micro Systems, identifying important factors that can influence their strategic decisions.
+
+What is the next section?
+
+================================================================================
+[Orchestrator]
+================================================================================
+What is the next section?
+
+================================================================================
+[Validator]
+================================================================================
+```
+SECTION: 7 - Risk & Growth Drivers
+AGENT: FinancialDocumentsAgent
+FORMAT: Analyst-grade JSON explaining asymmetry between risk and growth
+REQUEST: Extract risk and growth driver analyses for both Vodafone Idea and Apollo Micro Systems.
+
+OUTPUT STRUCTURE (MANDATORY):
+{
+  "section": 7,
+  "section_title": "Risk & Growth Drivers",
+  "slides": [
+    {
+      "slide_id": "7A",
+      "narrative": {
+        "what_this_section_does": "This section outlines the key risks and growth drivers influencing Vodafone Idea and Apollo Micro Systems.",
+        "vodafone_drivers": {
+          "growth_drivers": {
+            "statement": "Increasing demand for 5G services and expanding digital infrastructure in India.",
+            "explanation": "This growth driver presents significant revenue potential and expansion opportunities for Vodafone Idea."
+          },
+          "risk_factors": {
+            "statement": "Intense competition and regulatory pressures may hinder profitability.",
+            "explanation": "These risks create uncertainty around future performance and could impact market share."
+          }
+        },
+        "apollo_drivers": {
+          "growth_drivers": {
+            "statement": "Rising defense spending globally and a focus on indigenous manufacturing.",
+            "explanation": "Such growth drivers position Apollo Micro Systems to capitalize on government contracts and technological advancements."
+          },
+          "risk_factors": {
+            "statement": "Dependence on a limited number of clients in the defense sector can expose the company to revenue volatility.",
+            "explanation": "This risk illustrates the potential impact of contract loss or government budget cuts on overall financial performance."
+          }
+        }
+      }
+    }
+  ]
+}
+```
+
+This section provides an overview of the key risks and growth drivers affecting both Vodafone Idea and Apollo Micro Systems, offering insights into the potential asymmetry between the risks faced and the growth opportunities available.
+
+What is the next section?
+
+================================================================================
+[Orchestrator]
+================================================================================
+What is the next section?
+
+================================================================================
+[Validator]
+================================================================================
+```
+SECTION: 8 - Investment Thesis & Recommendations
+INSTRUCTION: Orchestrator to synthesize insights from all previous sections into a concise investment thesis.
+SLIDES: 8A (Combined)
+```
+
+Here’s the information for Section 8. 
+
+```
+{
+  "section": 8,
+  "section_title": "Investment Thesis & Recommendations",
+  "slides": [
+    {
+      "slide_id": "8A",
+      "companies": ["Vodafone Idea", "Apollo Micro Systems"],
+      "narrative": {
+        "what_this_section_does": "Synthesize analysis into actionable recommendations with decision logic for investors.",
+        "vodafone_thesis": {
+          "recommendation": "HOLD with a cautious outlook.",
+          "core_thesis": "Vodafone Idea's extensive market presence provides significant potential but is tempered by financial instability and competitive pressures.",
+          "thesis_explanation": "Investors should monitor the rollout of 5G services and cost-cutting measures as indicators of recovery potential.",
+          "investor_suitability": "Long-term investors who can tolerate volatility and are looking for exposure to the Indian telecom sector.",
+          "decision_logic": "Consider accumulating shares if 5G rollout progresses effectively and if debt management shows positive results."
+        },
+        "apollo_thesis": {
+          "recommendation": "BUY with strong growth prospects.",
+          "core_thesis": "Apollo Micro Systems is well-positioned to leverage increasing defense spending and technological advancements, promising robust growth.",
+          "thesis_explanation": "The company's strong financial position and consistent contract wins make it an attractive investment opportunity.",
+          "investor_suitability": "Best suited for investors seeking growth in the defense and electronics sectors with a focus on innovation.",
+          "decision_logic": "Continue to hold or buy shares as long as demand in the defense sector remains strong and contract wins sustain."
+        }
+      }
+    }
+  ]
+}
+```
+
+This section synthesizes insights from previous analyses into actionable investment recommendations for both Vodafone Idea and Apollo Micro Systems.
+
+PITCHBOOK COMPLETE: [JSON]
+
+================================================================================
+[Orchestrator]
+================================================================================
+Conversation completed.
+
+

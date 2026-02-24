@@ -1,0 +1,478 @@
+ANALYST-GRADE JSON FORMAT SPECIFICATION
+==========================================
+
+This is the MANDATORY format for ALL pitchbook sections.
+Every section must follow this self-describing, explanatory structure.
+
+KEY PRINCIPLES:
+✅ Contains sentence-level explanatory intent
+✅ Every statement has an "explanation" field explaining WHY it matters
+✅ Uses narrative + explanation (NO fake precision math)
+✅ Safe for PDF generation by another AI
+✅ Another AI can expand each sentence into multi-page text without guessing
+
+🚨 PDF-FRIENDLY EXPLANATION REQUIREMENTS (CRITICAL):
+==========================================
+
+ALL explanations MUST be detailed, complete, and PDF-ready:
+
+✅ **LENGTH**: Minimum 2-4 sentences per explanation (3-5 for complex topics)
+✅ **COMPLETE SENTENCES**: Full grammatical sentences, not fragments
+✅ **CAUSAL REASONING**: Use "because", "therefore", "which means", "as a result"
+✅ **CONTEXT-RICH**: Assume reader has no prior knowledge of the company
+✅ **INVESTOR-FOCUSED**: Always tie back to investment implications
+✅ **SPECIFIC**: Reference actual data, market conditions, not generic statements
+✅ **CONNECTIVE**: Show how one factor affects another (chains of reasoning)
+
+EXPLANATION QUALITY EXAMPLES:
+==========================================
+
+❌ BAD (too brief, no context):
+"explanation": "This shows market share decline."
+
+❌ BAD (generic, no specifics):
+"explanation": "The company faces challenges in a competitive market which may impact future performance."
+
+✅ GOOD (detailed, causal, investor-focused):
+"explanation": "The sustained market share erosion from 24% to 19% over the past eight quarters reflects structural competitive disadvantages rather than cyclical factors. This decline is driven by two interconnected issues: First, the company's delayed 4G rollout in tier-1 cities allowed competitors to capture high-ARPU customers who prioritize network quality over price. Second, the company's elevated debt burden constrains capital allocation to network upgrades, creating a negative feedback loop where service quality deteriorates relative to peers, which accelerates premium subscriber churn. From an investment perspective, this market share loss directly translates to revenue pressure and reduced operating leverage, making it increasingly difficult to generate the cash flows needed to service debt obligations. The trajectory suggests that without external intervention—either through capital infusion or industry-wide tariff increases—the company's ability to compete for high-value subscribers will continue to weaken, potentially leading to a permanent relegation to lower-margin customer segments."
+
+✅ GOOD (connects financial metrics with implications):
+"explanation": "The EBITDA margin compression from 32% to 26% is not merely a profitability concern—it represents a fundamental deterioration in the unit economics of the business. This margin pressure stems from three simultaneous factors extracted from the quarterly reports: network costs increasing due to deferred maintenance catching up, spectrum amortization expenses remaining fixed while revenues decline, and competitive pricing preventing cost pass-through to customers. For equity investors, margins below 28% are critical because at that threshold, the company's operating cash flow barely covers interest expenses, leaving insufficient funds for network capex. This creates strategic inflexibility where management must choose between maintaining service quality (and burning cash) or cutting costs (and losing more subscribers). The margin trajectory therefore serves as a real-time indicator of the company's viability as a going concern, making it arguably more important than top-line revenue figures for assessing investment risk."
+
+==========================================
+SECTION 1 - COMPANY SNAPSHOT FORMAT
+==========================================
+
+{
+  "section": 1,
+  "section_title": "Company Snapshot",
+  "slides": [
+    {
+      "slide_id": "1A",
+      "company": "Vodafone Idea",
+      "narrative": {
+        "what_this_section_does": "This section establishes the fundamental identity of the company so the reader understands what the business is, how it operates, and why it matters in the broader industry context.",
+        "business_overview": {
+          "statement": "Vodafone Idea operates as a large-scale telecommunications service provider in India.",
+          "explanation": "This sentence positions the company within the telecom sector and signals capital intensity, regulatory exposure, and scale dependence."
+        },
+        "business_model": {
+          "statement": "The company generates revenue primarily through mobile voice and data services offered to retail and enterprise customers.",
+          "explanation": "This explains the recurring revenue nature of the business and its dependence on subscriber base and ARPU trends."
+        },
+        "strategic_context": {
+          "statement": "Operations are heavily influenced by spectrum availability, network investments, and competitive pricing dynamics.",
+          "explanation": "This prepares the reader for later discussions on capex burden, debt, and valuation pressure."
+        }
+      }
+    }
+  ]
+}
+
+==========================================
+SECTION 2 - NEWS & SENTIMENT FORMAT
+==========================================
+
+REQUIREMENTS:
+• 12 detailed news items PER COMPANY
+• Each news item must have: headline, impact_level, detailed_explanation, investor_interpretation
+• Overall sentiment statement with explanation
+• Summary conclusion with explanation
+
+{
+  "section": 2,
+  "section_title": "News & Sentiment Analysis",
+  "slides": [
+    {
+      "slide_id": "2A",
+      "company": "Vodafone Idea",
+      "news_overview": {
+        "what_this_section_does": "This section explains how recent events influence investor psychology, stock volatility, and valuation expectations.",
+        "overall_sentiment_statement": {
+          "statement": "Market sentiment toward Vodafone Idea remains mixed with a speculative positive bias.",
+          "explanation": "This indicates that while risks remain high, markets are reacting strongly to any signs of survival or turnaround."
+        }
+      },
+      "news_items": [
+        {
+          "headline": "Vodafone Idea raises fresh capital through equity and debt instruments",
+          "impact_level": "HIGH",
+          "detailed_explanation": "Capital raising reduces near-term solvency concerns and signals continued promoter and government support. However, it does not eliminate long-term leverage risk.",
+          "investor_interpretation": "Positive for short-term stock sentiment; neutral to negative for long-term valuation unless profitability improves."
+        },
+        {
+          "headline": "Government reiterates support for maintaining three-player telecom market",
+          "impact_level": "HIGH",
+          "detailed_explanation": "Policy signaling reduces existential risk and reassures lenders and equity investors about industry structure stability.",
+          "investor_interpretation": "Strengthens survival thesis but does not guarantee shareholder returns."
+        }
+        // ... 10 more items (total 12)
+      ],
+      "summary_conclusion": {
+        "statement": "News flow suggests Vodafone Idea is trading more on survival probability than earnings fundamentals.",
+        "explanation": "Valuation remains sentiment-driven rather than cash-flow driven."
+      }
+    }
+  ]
+}
+
+==========================================
+SECTION 3 - FINANCIAL STATEMENTS FORMAT
+==========================================
+
+REQUIREMENTS:
+• Explain HOW revenues, margins, leverage, and cash flows interact
+• Do NOT just list numbers - explain what they mean
+• Use narrative to explain trends and implications
+
+{
+  "section": 3,
+  "section_title": "Financial Statements",
+  "slides": [
+    {
+      "slide_id": "3A",
+      "company": "Vodafone Idea",
+      "narrative": {
+        "what_this_section_does": "This section explains how the company's financial statements reveal its operational health, capital structure stress, and cash generation capability.",
+        "revenue_analysis": {
+          "statement": "Revenue has shown sequential decline reflecting subscriber losses and pricing pressure.",
+          "explanation": "Declining revenue indicates competitive weakness and challenges in maintaining market share against better-capitalized peers."
+        },
+        "margin_analysis": {
+          "statement": "EBITDA margins remain under pressure due to high network costs and competitive pricing.",
+          "explanation": "Margin compression reflects the capital-intensive nature of telecom operations without pricing power."
+        },
+        "leverage_analysis": {
+          "statement": "Debt levels remain elevated with significant deferred spectrum liabilities.",
+          "explanation": "High leverage constrains operational flexibility and creates refinancing risk, making the company vulnerable to cash flow volatility."
+        },
+        "cash_flow_analysis": {
+          "statement": "Operating cash flows are insufficient to cover capex requirements and debt service.",
+          "explanation": "Negative free cash flow indicates dependency on external financing and limits ability to invest in network upgrades."
+        }
+      }
+    }
+  ]
+}
+
+==========================================
+SECTION 4 - VALUATION TABLES FORMAT
+==========================================
+
+🚨 CRITICAL: This section requires 4 TABLES PER COMPANY (8 tables total) with REAL DATA and NARRATIVES
+
+REQUIREMENTS:
+• 4 tables per company: Snapshot, Valuations, Efficiency, Growth
+• MUST use MCP tool to fetch REAL data for all peer companies
+• Each table MUST have narrative with statement + explanation
+• NO placeholder values like "(insert value)" - only real data
+• Include company_row (the target company) in each table's rows array
+
+COMPANIES & PEERS:
+• Vodafone Idea: Compare with BHARTIARTL, INDUSTOWER, TATACOMM, RAILTEL, TTML
+• Apollo Micro Systems: Compare with PREMIERENE, KAYNES, SYRMA, VIKRAMSOLR, AVALON
+
+{
+  "section": 4,
+  "section_title": "Valuation Tables",
+  "companies": [
+    {
+      "company": "Vodafone Idea",
+      "color": "#dc2626",
+      "peer_group": ["BHARTIARTL", "INDUSTOWER", "TATACOMM", "RAILTEL", "TTML"],
+      "narrative": {
+        "what_this_section_does": "This section provides comprehensive peer comparison across 4 key valuation dimensions, enabling investors to assess Vodafone Idea's relative positioning in the telecom sector. By examining snapshot metrics, valuation multiples, operational efficiency, and growth trajectories side-by-side with competitors, investors can identify whether the company trades at a premium or discount and understand the underlying operational and financial drivers behind these valuations.",
+        "valuation_context": {
+          "statement": "Vodafone Idea currently trades at a significant discount to its primary competitors Bharti Airtel and Reliance Jio, with enterprise value metrics reflecting persistent concerns about debt serviceability and competitive positioning.",
+          "explanation": "This valuation discount is not merely a reflection of current profitability challenges but represents the market's assessment of long-term viability concerns. The company's negative ROE and ROCE indicate capital destruction rather than creation, which fundamentally justifies lower valuation multiples compared to peers who demonstrate positive returns on invested capital. Additionally, the debt-to-equity ratio creates significant financial risk, as high leverage amplifies downside scenarios and constrains management's strategic flexibility. Investors must recognize that this discount may be rational rather than representing a value opportunity."
+        }
+      },
+      "tables": [
+        {
+          "table_id": "snapshot",
+          "table_title": "Peer Comparison Snapshot",
+          "narrative": {
+            "statement": "The snapshot table presents core fundamental metrics including current market price, market capitalization, profitability ratios (P/E), and efficiency measures (ROE, ROCE) alongside capital structure (Debt/Equity), providing a holistic view of each company's financial health and market valuation.",
+            "explanation": "These metrics collectively reveal whether a company creates value for shareholders (positive ROE/ROCE), how the market values that value creation (P/E ratio), and the financial risk embedded in the capital structure (Debt/Equity). For Vodafone Idea, negative ROE and ROCE immediately signal value destruction, while the high debt-to-equity ratio amplifies downside risk. Investors should view this snapshot as a financial health scorecard where multiple red flags indicate elevated investment risk."
+          },
+          "peer_data": {
+            "columns": ["Stock", "CMP", "Market Cap", "P/E", "ROE (%)", "ROCE (%)", "Debt/Equity"],
+            "rows": [
+              {"Stock": "Vodafone Idea", "CMP": "12.50", "Market Cap": "85,000 Cr", "P/E": "N/A", "ROE (%)": "-15.2", "ROCE (%)": "-8.5", "Debt/Equity": "4.2"},
+              {"Stock": "BHARTIARTL", "CMP": "...", "Market Cap": "...", "P/E": "...", "ROE (%)": "...", "ROCE (%)": "...", "Debt/Equity": "..."}
+            ]
+          }
+        },
+        {
+          "table_id": "valuations",
+          "table_title": "Valuation Multiples",
+          "narrative": {
+            "statement": "Valuation multiples including PE, PS (Price-to-Sales), PBV (Price-to-Book Value), PEG (Price/Earnings-to-Growth), and EV/EBITDA ratios provide different lenses for assessing whether a stock is overvalued, fairly valued, or undervalued relative to its financial metrics and peers.",
+            "explanation": "Each multiple serves a specific analytical purpose: PE shows what investors pay per rupee of earnings; PS helps value companies even without profits; PBV compares market value to book value; PEG adjusts PE for growth expectations; and EV/EBITDA provides a capital-structure-neutral view. Understanding these multiples in context helps investors distinguish between temporary operational challenges versus permanent competitive disadvantages."
+          },
+          "peer_data": {
+            "columns": ["Stock", "PE", "PS", "PBV", "PEG", "EV/EBITDA"],
+            "rows": []
+          }
+        },
+        {
+          "table_id": "efficiency",
+          "table_title": "Efficiency Metrics",
+          "narrative": {
+            "statement": "Operational efficiency metrics including ROA (Return on Assets), ROE (Return on Equity), ROCE (Return on Capital Employed), Asset Turnover Ratio, and Cash Conversion Cycle (CCC) measure how effectively a company converts its resources into profits and cash flows.",
+            "explanation": "These metrics are fundamental indicators of management quality and competitive positioning. ROA shows profit generation per rupee of assets. ROE measures equity investor returns but can be artificially inflated by high leverage. ROCE focuses on returns on all invested capital, providing the cleanest measure of operating efficiency. Asset Turnover indicates how efficiently assets generate sales. CCC measures working capital management efficiency."
+          },
+          "peer_data": {
+            "columns": ["Stock", "ROA (%)", "ROE (%)", "ROCE (%)", "Asset Turnover Ratio", "CCC (Days)"],
+            "rows": []
+          }
+        },
+        {
+          "table_id": "growth",
+          "table_title": "Growth Metrics",
+          "narrative": {
+            "statement": "Historical growth metrics for sales and earnings per share (EPS) over 1-year and 3-year periods reveal each company's momentum, market share trends, and ability to convert top-line growth into bottom-line profitability improvements.",
+            "explanation": "Sales growth indicates market share gains or losses. However, revenue growth without corresponding EPS growth suggests margin pressure or inability to scale profitably. The 1-year metrics capture recent momentum while 3-year metrics reveal sustained competitive positioning. Companies with consistently strong growth across both metrics typically maintain or expand valuation multiples, while those with negative trends face multiple compression."
+          },
+          "peer_data": {
+            "columns": ["Stock", "Sales 1Y (%)", "Sales 3Y (%)", "EPS 1Y (%)", "EPS 3Y (%)"],
+            "rows": []
+          }
+        }
+      ]
+    },
+    {
+      "company": "Apollo Micro Systems",
+      "color": "#2563eb",
+      "peer_group": ["PREMIERENE", "KAYNES", "SYRMA", "VIKRAMSOLR", "AVALON"],
+      "narrative": {
+        "what_this_section_does": "This section evaluates Apollo Micro Systems against defense and electronics sector peers across four critical dimensions: fundamental snapshot metrics, valuation multiples, operational efficiency, and growth momentum. This multi-dimensional comparison enables investors to assess whether Apollo's valuation premium (or discount) is justified by superior operational performance and growth prospects.",
+        "valuation_context": {
+          "statement": "Apollo Micro Systems trades at a premium valuation relative to some peers, justified by its specialized focus on defense electronics, strong order book visibility, and consistent execution track record in a high-barrier-to-entry sector.",
+          "explanation": "The valuation premium reflects investor confidence in Apollo's ability to capitalize on India's defense modernization program and growing demand for indigenous electronic systems. Unlike generic electronics manufacturers, Apollo's defense specialization provides pricing power and longer contract durations, which reduces revenue volatility and supports premium multiples. However, this premium also embeds high expectations for continued order wins and margin maintenance, making the stock sensitive to any execution disappointments or defense budget allocation shifts."
+        }
+      },
+      "tables": [
+        {
+          "table_id": "snapshot",
+          "table_title": "Peer Comparison Snapshot",
+          "narrative": {
+            "statement": "Core valuation and efficiency metrics position Apollo Micro Systems within the defense electronics and EMS peer group, highlighting relative valuation, profitability, and leverage profiles that drive investment returns.",
+            "explanation": "The snapshot reveals Apollo's competitive positioning through market capitalization (scale), P/E ratio (earnings valuation), ROE and ROCE (capital efficiency), and Debt/Equity (financial risk). Positive ROE and ROCE above 10-12% indicate value creation, while moderate debt levels preserve financial flexibility for growth investments. Comparing these metrics across peers identifies whether Apollo's valuation is supported by superior operational fundamentals or reflects sector-wide momentum."
+          },
+          "peer_data": {
+            "columns": ["Stock", "CMP", "Market Cap", "P/E", "ROE (%)", "ROCE (%)", "Debt/Equity"],
+            "rows": []
+          }
+        },
+        {
+          "table_id": "valuations",
+          "table_title": "Valuation Multiples",
+          "narrative": {
+            "statement": "Multiple-based valuation analysis using PE, PS, PBV, PEG, and EV/EBITDA ratios reveals whether Apollo trades at a premium or discount relative to peers and whether that differential is justified by growth, margins, or competitive positioning.",
+            "explanation": "High PE ratios relative to peers may indicate either market enthusiasm for growth prospects or overvaluation risk. PEG ratios above 2.0 suggest the stock may be expensive relative to growth rates. EV/EBITDA provides insight into enterprise value relative to operating cash generation, helping assess whether the current price compensates investors adequately for operational performance. Cross-checking multiple valuation lenses prevents over-reliance on any single metric and provides a balanced view."
+          },
+          "peer_data": {
+            "columns": ["Stock", "PE", "PS", "PBV", "PEG", "EV/EBITDA"],
+            "rows": []
+          }
+        },
+        {
+          "table_id": "efficiency",
+          "table_title": "Efficiency Metrics",
+          "narrative": {
+            "statement": "Efficiency metrics including ROA, ROE, ROCE, Asset Turnover, and Cash Conversion Cycle demonstrate Apollo's ability to generate profits and cash from its asset base and working capital, benchmarked against sector peers.",
+            "explanation": "Superior ROA, ROE, and ROCE (above peer median) signal competitive advantages through better pricing power, operational excellence, or favorable business mix. Asset turnover reveals capital intensity—higher ratios indicate less capital required per rupee of sales. Lower CCC (fewer days) indicates efficient working capital management, freeing up cash for reinvestment or debt reduction. Apollo's efficiency metrics relative to peers determine whether it deserves a valuation premium."
+          },
+          "peer_data": {
+            "columns": ["Stock", "ROA (%)", "ROE (%)", "ROCE (%)", "Asset Turnover Ratio", "CCC (Days)"],
+            "rows": []
+          }
+        },
+        {
+          "table_id": "growth",
+          "table_title": "Growth Metrics",
+          "narrative": {
+            "statement": "Revenue and EPS growth rates over 1-year and 3-year periods quantify Apollo's historical growth momentum and consistency, which are critical inputs for assessing the sustainability of current valuation multiples and future return potential.",
+            "explanation": "Strong double-digit sales growth (above 20% annually) combined with even stronger EPS growth indicates operating leverage and margin expansion as the business scales. Consistent 3-year growth above peers validates the durability of competitive advantages and justifies premium valuations. Conversely, decelerating growth or negative EPS trends despite revenue growth signals margin pressure and raises concerns about pricing power and cost structure sustainability."
+          },
+          "peer_data": {
+            "columns": ["Stock", "Sales 1Y (%)", "Sales 3Y (%)", "EPS 1Y (%)", "EPS 3Y (%)"],
+            "rows": []
+          }
+        }
+      ]
+    }
+  ]
+}
+
+🚨 AGENT INSTRUCTIONS FOR SECTION 4:
+1. Use MCP tool "get_company_fundamentals" to fetch data for ALL companies (target + all peers)
+2. Extract: market_cap, pe_ratio, pb_ratio, roe, debt_to_equity, profit_margin, operating_margin
+3. Calculate or fetch growth metrics (Sales 1Y%, Sales 3Y%, EPS 1Y%, EPS 3Y%)
+4. Build peer_data.rows array with REAL values for ALL stocks
+5. Include company_row (target company) as first row in each table
+6. Use "N/A" only when data truly unavailable, not as placeholder
+
+==========================================
+SECTION 5 - HISTORICAL VALUATION FORMAT
+==========================================
+
+REQUIREMENTS:
+• Explain valuation cycles and investor expectations
+• Show how valuation has changed over time and WHY
+• Connect valuation trends to business developments
+
+{
+  "section": 5,
+  "section_title": "Historical Valuation Trends",
+  "slides": [
+    {
+      "slide_id": "5A",
+      "companies": ["Vodafone Idea", "Apollo Micro Systems"],
+      "narrative": {
+        "what_this_section_does": "This section explains how market perception and valuation have evolved over time in response to business developments.",
+        "vodafone_trend": {
+          "statement": "Vodafone Idea's valuation multiples have contracted sharply as financial distress concerns intensified.",
+          "explanation": "The de-rating reflects deteriorating fundamentals and increasing uncertainty about long-term viability."
+        },
+        "apollo_trend": {
+          "statement": "Apollo Micro Systems has experienced valuation expansion driven by order book growth and defense sector tailwinds.",
+          "explanation": "The re-rating reflects improving earnings visibility and strong sector momentum."
+        }
+      }
+    }
+  ]
+}
+
+==========================================
+SECTION 6 - SWOT ANALYSIS FORMAT
+==========================================
+
+REQUIREMENTS:
+• Explain structural vs temporary strengths and weaknesses
+• Differentiate between fixable and permanent issues
+• Explain opportunities and threats in context
+
+{
+  "section": 6,
+  "section_title": "SWOT Analysis",
+  "slides": [
+    {
+      "slide_id": "6A",
+      "company": "Vodafone Idea",
+      "narrative": {
+        "what_this_section_does": "This section distinguishes between structural advantages and temporary challenges to inform investment decision-making.",
+        "strengths": {
+          "statement": "Large subscriber base and nationwide network infrastructure provide competitive moat.",
+          "explanation": "These are structural advantages that cannot be easily replicated, though they require continuous investment to maintain."
+        },
+        "weaknesses": {
+          "statement": "High debt burden and subscriber churn create financial and operational pressure.",
+          "explanation": "These are structural weaknesses that constrain strategic flexibility and require external support to address."
+        },
+        "opportunities": {
+          "statement": "Potential tariff hikes and 5G adoption could improve unit economics.",
+          "explanation": "Industry-wide pricing discipline would benefit all players but requires coordination and regulatory support."
+        },
+        "threats": {
+          "statement": "Continued market share loss to better-capitalized peers threatens long-term viability.",
+          "explanation": "Competitive pressure from financially stronger players creates existential risk if cash generation does not improve."
+        }
+      }
+    }
+  ]
+}
+
+==========================================
+SECTION 7 - RISK & GROWTH DRIVERS FORMAT
+==========================================
+
+REQUIREMENTS:
+• Explain asymmetry between downside risk and upside optionality
+• Quantify risk in narrative terms (not fake percentages)
+• Explain growth drivers and their likelihood
+
+{
+  "section": 7,
+  "section_title": "Risk & Growth Drivers",
+  "slides": [
+    {
+      "slide_id": "7A",
+      "companies": ["Vodafone Idea", "Apollo Micro Systems"],
+      "narrative": {
+        "what_this_section_does": "This section evaluates the risk-reward profile by examining downside scenarios and upside catalysts.",
+        "vodafone_risk_profile": {
+          "downside_statement": "Primary downside risk stems from potential inability to secure continued financing.",
+          "downside_explanation": "Without capital infusions, the company faces solvency risk and potential market exit.",
+          "upside_statement": "Upside exists if tariff hikes materialize and subscriber losses stabilize.",
+          "upside_explanation": "Improved pricing power and customer retention would restore cash generation and reduce leverage."
+        },
+        "apollo_risk_profile": {
+          "downside_statement": "Key risk is execution delay in ramping up production capacity.",
+          "downside_explanation": "Delays could impact revenue recognition and margin profiles, though order book provides visibility.",
+          "upside_statement": "Strong upside from defense budget increases and export growth.",
+          "upside_explanation": "Structural tailwinds support multi-year growth with high earnings visibility."
+        }
+      }
+    }
+  ]
+}
+
+==========================================
+SECTION 8 - INVESTMENT THESIS FORMAT
+==========================================
+
+REQUIREMENTS:
+• Explain decision logic, not just recommendation labels
+• Synthesize insights from all previous sections
+• Provide clear rationale for each recommendation
+
+{
+  "section": 8,
+  "section_title": "Investment Thesis & Recommendations",
+  "slides": [
+    {
+      "slide_id": "8A",
+      "companies": ["Vodafone Idea", "Apollo Micro Systems"],
+      "narrative": {
+        "what_this_section_does": "This section synthesizes all previous analysis into actionable investment recommendations with clear decision logic.",
+        "vodafone_thesis": {
+          "recommendation": "SPECULATIVE BUY for high-risk investors only",
+          "core_thesis": "Vodafone Idea represents a high-risk, high-reward turnaround play dependent on external support.",
+          "thesis_explanation": "The investment case rests on government support continuing, tariff hikes materializing, and subscriber losses stabilizing. Without these catalysts, downside risk remains substantial.",
+          "investor_suitability": "Only suitable for investors with high risk tolerance and ability to withstand potential total loss.",
+          "decision_logic": "Buy only if position size is small enough to absorb potential total loss, and only if government support thesis remains credible."
+        },
+        "apollo_thesis": {
+          "recommendation": "BUY with moderate conviction",
+          "core_thesis": "Apollo Micro Systems benefits from structural defense sector growth with visible order book.",
+          "thesis_explanation": "The company operates in a growing market with strong government support and limited competition. Earnings visibility is high and valuation, while elevated, reflects genuine growth momentum.",
+          "investor_suitability": "Suitable for growth-oriented investors willing to pay premium valuations for high-visibility growth.",
+          "decision_logic": "Buy on dips or if valuation corrects; current premium is justified by fundamentals but limits margin of safety."
+        }
+      }
+    }
+  ]
+}
+
+==========================================
+CRITICAL REMINDERS FOR ALL AGENTS
+==========================================
+
+✅ ALWAYS include "what_this_section_does" explanation (EXCEPT Section 4)
+✅ EVERY statement must have an "explanation" field (EXCEPT Section 4)
+✅ Use narrative format - explain trends and relationships (EXCEPT Section 4)
+✅ NO fake precision numbers (use ranges and qualitative descriptions)
+✅ Make it safe for another AI to expand into detailed PDF text
+✅ Focus on WHY things matter, not just WHAT happened
+✅ Explain investor implications for every piece of information
+
+**EXCEPTION - SECTION 4 (Valuation Tables):**
+• Section 4 is intentionally DATA-DRIVEN
+• Provide clean comparison tables with actual metrics
+• Use brief "key_insight" summary (one line) per slide
+• NO lengthy narrative explanations for Section 4
+• Let the numbers speak for themselves
+
+==========================================
