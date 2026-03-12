@@ -420,9 +420,6 @@ az containerapp show --name pitchbook-backend \
 - [React Documentation](https://react.dev/)
 - [Model Context Protocol](https://modelcontextprotocol.io/)
 
-## 📄 License
-
-[Add your license information here]
 
 ## 🔮 Future Enhancements
 
